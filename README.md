@@ -30,6 +30,16 @@ As a user
 '''''' 
 Extra's - /  In which I can discuss the allotment and deadline / // I can edit my profile // // I can negotiate the terms(deadline, allotment, wager) of the challenge //
 ''''' 
+___________________________________________________________
+
+EXTRA TO DO :
+
+
+
+
+_________________________________________________________
+
+
 
 # MoSCoW
 ## Must have: 
