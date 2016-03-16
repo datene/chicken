@@ -1,0 +1,2 @@
+class LoggedTimesController < ApplicationController
+end

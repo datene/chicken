@@ -1,0 +1,2 @@
+module LoggedTimesHelper
+end
