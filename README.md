@@ -1,8 +1,8 @@
 As a user
 
 
-- [ ] CREATE CHALLENGE CONTROLLER : 
-- [ ] I can create a challenge: (Challlenger controller new + create) 
+- [ ] ## CREATE CHALLENGE CONTROLLER : 
+- [ ] # I can create a challenge: (Challlenger controller new + create) 
 - [ ]  in which I can challenge a friend
 - [ ] with the wager and the wager should have a amount / description / name
 - [ ] with a deadline 
@@ -29,3 +29,6 @@ As a user
 
 '''''' 
 Extra's - /  In which I can discuss the allotment and deadline / // I can edit my profile // // I can negotiate the terms(deadline, allotment, wager) of the challenge //
+
+## MoSCoW
+# Must have: 
