@@ -29,6 +29,39 @@ As a user
 
 '''''' 
 Extra's - /  In which I can discuss the allotment and deadline / // I can edit my profile // // I can negotiate the terms(deadline, allotment, wager) of the challenge //
+''''' 
 
-## MoSCoW
-# Must have: 
+# MoSCoW
+## Must have: 
+create a user
+Invite a second user
+Creation of Challenge
+See challenge
+Log time spent
+See score
+
+## Should have
+fancy stats @ index
+list challenges
+FB login 
+Email notifications
+Chat with opponent
+
+## Could have 
+Ajax time logging
+Ajax chatting
+Dynamic altered visual score
+Dynamic examples of activities 
+
+## Would have 
+FIREWORK ANIMATIONS when you won
+Animated button 
+Membership program
+Challenge multi players
+Create more months for a challenge
+Business model
+payment system 
+Possibility of challenging unknown people
+possibility of challenging someone with a different activity
+
+
