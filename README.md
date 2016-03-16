@@ -14,12 +14,12 @@ As a user
 - [ ] I can accept a challenge (challenge controller accept)
 - [ ] I can decline a challenge(challenge controller decline)
 - [ ] I can concede a challenge(challenge controller concede)
-- 
+ 
 - [ ] I can see my own activity/ I can see my own profile / I can list my challenges ( challenges index which redirects to /dashboard)
 
 - [ ] I can login (devise login)
 - [ ] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
-- 
+ 
 - [ ] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
 - [ ] I can log my hours spend on the activity (Logged_time controller new usage of Ajax if possible(see lecture reviews) )
 
