@@ -2,7 +2,8 @@ class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
       t.text :content
-      t.referenceschallenge :user
+      t.references :challenge
+      t.references :user
 
       t.timestamps null: false
     end
