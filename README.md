@@ -1,5 +1,7 @@
 As a user
 
+- [ ] create a migration to change datetime to date!!!
+
 
 - [ ] CREATE CHALLENGE CONTROLLER : 
 - [ ] I can create a challenge: (Challlenger controller new + create) 
