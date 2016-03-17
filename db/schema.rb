@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316145931) do
+ActiveRecord::Schema.define(version: 20160317154715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "challenges", force: :cascade do |t|
     t.string   "name"
-    t.datetime "start_date"
-    t.datetime "deadline"
+    t.date     "start_date"
+    t.date     "deadline"
     t.integer  "allotment"
     t.string   "status"
     t.string   "activity"
