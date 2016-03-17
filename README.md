@@ -19,7 +19,7 @@ As a user
  
 - [x] I can see my own activity/ I can see my own profile / I can list my challenges ( challenges index which redirects to /dashboard)
 
-- [ ] I can login (devise login)
+- [x] I can login (devise login)
 - [ ] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
  
 - [ ] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
