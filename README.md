@@ -17,7 +17,7 @@ As a user
 - [ ] I can decline a challenge(challenge controller decline)
 - [ ] I can concede a challenge(challenge controller concede)
  
-- [ ] I can see my own activity/ I can see my own profile / I can list my challenges ( challenges index which redirects to /dashboard)
+- [x] I can see my own activity/ I can see my own profile / I can list my challenges ( challenges index which redirects to /dashboard)
 
 - [ ] I can login (devise login)
 - [ ] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
