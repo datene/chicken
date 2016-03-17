@@ -24,10 +24,12 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  
-  
+
+
 end
 
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'omniauth-facebook'
