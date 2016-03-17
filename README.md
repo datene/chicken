@@ -1,6 +1,6 @@
 As a user
 
-- [ ] create a migration to change datetime to date!!!
+- [x] create a migration to change datetime to date!!!
 
 
 - [ ] CREATE CHALLENGE CONTROLLER : 
