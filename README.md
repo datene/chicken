@@ -4,8 +4,9 @@ As a user
 
 
 - [ ] CREATE CHALLENGE CONTROLLER : 
-- [ ] I can create a challenge: (Challlenger controller new + create) 
-- [ ]  in which I can challenge a friend
+- [x] I can create a challenge: (Challlenger controller new + create) 
+- [ ] edit a challenge
+- [ ]  in which I can invite  a friend by email
 - [ ] with the wager and the wager should have a amount / description / name
 - [ ] with a deadline 
 - [ ] with an allotment
