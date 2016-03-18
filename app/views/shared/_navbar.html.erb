@@ -1,61 +1,47 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "chicken.png" %>
+  <%= image_tag "chicken.png" %>
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
 
-  <div class="navbar-wagon-item">
-    <div class="dropdown">
-      <i class="fa fa-bars fa-2x dropdown-toggle" data-toggle="dropdown"></i>
-      <div class="badge badge-yellow">3</div>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-    <!-- Different navigation if login or not -->
-    <% if user_signed_in? %>
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <i class="fa fa-bars fa-2x dropdown-toggle" data-toggle="dropdown"></i>
+        <div class="badge badge-yellow">3</div>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <!-- Different navigation if login or not -->
+          <% if user_signed_in? %>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
+          <!-- Notification -->
+          <li><%= link_to t(".top_call_to_action", default: "Dashboard"), "#", class: "navbar-wagon-item" %>
+          </li>
+          <li><%= link_to t(".top_call_to_action", default: "About"), "#", class: "navbar-wagon-item" %>
+          </li>
+          <li><%= link_to t(".top_call_to_action", default: "Rules"), "#", class: "navbar-wagon-item" %>
+          </li>
+          <li><%= link_to t(".top_call_to_action", default: "Contact us"), "#", class: "navbar-wagon-item" %>
+          </li>
+
+          <!-- Profile picture and dropdown -->
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+            <% end %>
+          </li>
+
+          <% else %>
+
+          <!-- Login text link -->
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+          <% end %>
         </div>
-      <% end %>
 
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    <% else %>
-
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-    <% end %>
-  </div>
-
-  <!-- Dropdown list appearing on mobile only -->
+        <!-- Dropdown list appearing on mobile only -->
       </ul>
     </div>
   </div>
