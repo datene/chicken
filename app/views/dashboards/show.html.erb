@@ -1,14 +1,15 @@
 <div class="wrap">
 
-  <h1> 
+  <h1>
     PROFILE
     ALL YOUR CHALLENGES
   </h1>
   <ul>
     <h2>
-    <%#(When FB is working, uncomment this)= current_user.picture %>
+    <%= image_tag current_user.picture %>
       <%= current_user.first_name%>
       <%= current_user.last_name%>
+
     </h2>
 
 
