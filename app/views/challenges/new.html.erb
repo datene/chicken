@@ -1,3 +1,11 @@
   <div class="new_challenge">
     <h1>THIS IS de drie vragen die eigenlijk onze root zijn</h1>
+
+    <%=simple_form_for @challenge do |f| %>
+    <%= f.input :activity %>
+    <%= f.input :email_challenger %>
+    <%= f.input :wager_amount %>
+    <%= f.submit %>
+    <% end %>
+
   </div>
