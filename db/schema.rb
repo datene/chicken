@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318105828) do
+ActiveRecord::Schema.define(version: 20160318112843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +21,16 @@ ActiveRecord::Schema.define(version: 20160318105828) do
     t.date     "start_date"
     t.date     "deadline"
     t.integer  "allotment"
-    t.string   "status"
+    t.string   "status",            default: "pending"
     t.string   "activity"
     t.integer  "creator_id"
     t.integer  "challenger_id"
     t.integer  "wager_amount"
     t.text     "wager_description"
     t.string   "wager_name"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "email_challenger"
   end
 
   add_index "challenges", ["challenger_id"], name: "index_challenges_on_challenger_id", using: :btree
