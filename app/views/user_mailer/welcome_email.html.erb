@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <link rel="stylesheet/pages" type="text/css" href="_email.css">
+</head>
+<body>
+<div class="email">
     <h1>Hey <%= @challenge.name_challenger %>!</h1>
     <p>
       You have been challenged by <%= @creator.first_name %> <%= @creator.last_name %>.
@@ -13,19 +14,17 @@
     <ul>
       <li>Go <%= @challenge.activity %> </li>
       <li> <%= @challenge.allotment %> times a week for the next 4 weeks. </li>
-    <p> You place a bet of <%= @challenge.wager_amount %>.</p>
-    <p> Succeed? You get the full <%= @challenge.wager_amount %> back. </p>
-    <p> Chicken out? <%= @creator.first_name %> wins your money. </p>
+      <p> You place a bet of <%= @challenge.wager_amount %>.</p>
+      <p> Succeed? You get the full <%= @challenge.wager_amount %> back. </p>
+      <p> Chicken out? <%= @creator.first_name %> wins your money. </p>
 
     </ul>
+  </div>
 
 
-
-    <p>
-
-
-      To login to the site, just follow this link: <%= link_to "see your challenge", root_path %>.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
-  </body>
+  <p>
+    To login to the site, just follow this link: <%= link_to "see your challenge", root_path %>.
+  </p>
+  <p>Thanks for joining and have a great day!</p>
+</body>
 </html>

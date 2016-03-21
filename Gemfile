@@ -25,6 +25,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'spring'
 
+  gem 'letter_opener_web', '~> 1.2.0'
 
 end
 
@@ -36,4 +37,4 @@ gem 'omniauth-facebook'
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 
-
+gem 'premailer-rails', '~> 1.9'
