@@ -1,5 +1,13 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:edit, :update, :destroy, :accept, :decline, :concede]
+  before_action :set_challenge, only: [:edit, :show, :update, :destroy, :accept, :decline, :concede]
+
+  def show 
+    if @challenge.challenger_id.nil?
+      flash[:notice] = "The challenger has not yet accepted your challenge!"
+    else 
+      render :show
+     end 
+  end
 
   def new
     @challenge = Challenge.new

@@ -4,24 +4,24 @@
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item creator borderavatar" %>
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item challenger borderavatar" %>
     </div>
-    <h1>BOWLING</h1>
+    <h1><%=@challenge.activity.upcase%></h1>
     <div class="playerbox">
-      <p class="player-item">Lars</p><p class="player-item grey">vs</p><p class="player-item">Lena</p>
+    <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item">Lena</p> <%#DIT IS EVEN LASTIG..DIEGENE MOET OOK EEN ACCOUNT HEBBEN ANDERS werkt het niet, only show if challenge.accept%> <%# if it works: <%= @challenge.challenger.first_name %>
     </div>
   </div>
   <div class="wagers">
-    <div class="wager creator"><div class="euro">&#8364;</div><div>50</div></div>
+    <div class="wager creator"><div class="euro">&#8364;</div><div><%= @challenge.wager_amount %></div></div>
     <div class="wager filler"></div>
-    <div class="wager challenger"><div class="euro">&#8364;</div><div>50</div></div>
+    <div class="wager challenger"><div class="euro">&#8364;</div><div><%= @challenge.wager_amount %></div></div>
   </div>
   <div class="creatorwagerbar"></div>
   <div class="challengerwagerbar"></div>
   <div class="score">
     <h2>score</h2>
     <div class="avatarbox allotment">
-    <div class="blackglow"></div>
+      <div class="blackglow"></div>
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>
-      <div class="alloted">3</div>
+      <div class="alloted"><%= @challenge.allotment %></div>
       <div class="blackglow"></div>
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>
     </div>
