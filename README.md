@@ -43,7 +43,8 @@ EXTRA TO DO :
 - [ ] edit and new challenge: styling
 - [ ] show challenge: balken moeten kloppen, + score meter
 - [ ] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
-
+- [ ] NAVBAr staat nog op stand waarbij het iets moet doen als ie klein word 
+- [ ] waarden in show aanpassen aan ingevulde velden
 _________________________________________________________
 
 
