@@ -1,8 +1,8 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:edit, :update, :destroy, :accept, :decline, :concede]    
+  before_action :set_challenge, only: [:edit, :update, :destroy, :accept, :decline, :concede]
 
   def new
-    @challenge = Challenge.new 
+    @challenge = Challenge.new
   end
 
   def create
@@ -21,6 +21,7 @@ class ChallengesController < ApplicationController
   def update
     if @challenge.update(challenge_params_edit)
       flash[:notice] = "Succesfully created this challenge"
+      UserMailer.welcome_email(@challenge).deliver_now
       redirect_to challenge_path
     else
       flash.now[:alert] = "Oops.. Let's try again"
@@ -28,9 +29,9 @@ class ChallengesController < ApplicationController
   end
 
   def destroy
-  end 
+  end
 
-  def accept # challenger that creates this challenge and gets a profile: connect to challenger_id 
+  def accept # challenger that creates this challenge and gets a profile: connect to challenger_id
   end
 
   def decline
@@ -43,7 +44,7 @@ class ChallengesController < ApplicationController
 
   def challenge_params_new
     params.require(:challenge).permit(:activity, :email_challenger, :wager_amount)
-  end 
+  end
 
   def challenge_params_edit
     params.require(:challenge).permit(:activity, :email_challenger, :wager_amount, :start_date, :deadline, :allotment)
