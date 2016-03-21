@@ -9,26 +9,31 @@
   justify-content: space-around;
   height: 150px;
   width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
-.avatarbox .avatar {
+.borderavatar {
   border: 3px solid white;
 }
 
 .avatarbox .creator {
   position: absolute;
-  left: 100px;
   z-index: 999;
+  top: 0px;
+  left: 70px;
 }
 
 .avatarbox .challenger {
   position: absolute;
-  right: 100px;
   z-index: 1;
+  top: 0px;
+  right: 70px;
 }
 
 .box-item {
-  flex: 0 0 20%;
+  flex: 0 0 150px;
 }
 
 .playerbox {
@@ -47,17 +52,93 @@
   color: #D6D6D6;
 }
 
-.wager {
+.wagers {
+  font-size: 30pt;
   display: flex;
   justify-content: space-between;
 }
 
+.wager {
+  width: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.filler {
+  flex: 1 0 40%;
+}
+
 .creator {
-  flex: 0 0 20%;
+  flex: 0 0 130px;
   color: $red;
 }
 
 .challenger {
-  flex: 0 0 20%;
+  flex: 0 0 130px;
   color: $blue;
+}
+
+.euro {
+  font-size: 20pt;
+  color: #515151;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+
+.creatorwagerbar {
+  height: 20px;
+  background-color: $red;
+}
+
+.challengerwagerbar {
+  height: 20px;
+  background-color: $blue;
+}
+
+.score {
+  background-color: $brand-color;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.score h2 {
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+.alloted {
+  font-size: 20pt;
+  text-align: center;
+  color: white;
+  margin: auto 0;
+  padding-top: 8px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .4);
+}
+
+.allotment {
+  padding-bottom: 80px;
+}
+
+.add_score {
+  background-color: #333333;
+  font-size: 30pt;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.blackglow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 999;
 }
