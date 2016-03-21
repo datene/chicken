@@ -6,7 +6,7 @@ As a user
 - [x] CREATE CHALLENGE CONTROLLER : 
 - [x] I can create a challenge: (Challlenger controller new + create) 
 - [x] edit a challenge
-- [ ]  in which I can invite  a friend by email
+- [x]  in which I can invite  a friend by email
 - [x] with the wager and the wager should have a amount / description / name
 - [x] with a deadline 
 - [x] with an allotment
@@ -32,11 +32,13 @@ As a user
 
 '''''' 
 Extra's - /  In which I can discuss the allotment and deadline / // I can edit my profile // // I can negotiate the terms(deadline, allotment, wager) of the challenge //
+
 ''''' 
 ___________________________________________________________
 
 EXTRA TO DO :
 
+- [ ] Change the end date to dd/mm/yy instead of a full stamp
 
 
 
