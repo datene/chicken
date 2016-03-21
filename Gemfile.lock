@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/derekprior/momentjs-rails.git
+  revision: eda1b74512db5844673bd4d37a6e4fe6127053b3
+  specs:
+    momentjs-rails (2.11.0)
+      railties (>= 3.1)
+
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 36d21cec5da7f5b214925804f60e63c61c747023
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (4.7.16)
+      momentjs-rails (>= 2.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -197,11 +213,13 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  datetimepicker-rails!
   devise
   figaro
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails (~> 2.9)!
   omniauth-facebook
   pg
   pry-byebug

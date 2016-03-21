@@ -1,17 +1,12 @@
 class ChallengesController < ApplicationController
-  
+  before_action :set_challenge, only: [:edit, :update, :destroy, :accept, :decline, :concede]    
 
   def new
     @challenge = Challenge.new 
-    # @creator_id = current_user.id
-    # challenger = User.new
-    # @challenger_id = challenger.id
-
-    # three questions should be created
   end
 
   def create
-    @challenge = Challenge.new(challenge_params)
+    @challenge = Challenge.new(challenge_params_new)
 
     if user_signed_in?
       create_with_user
@@ -21,10 +16,15 @@ class ChallengesController < ApplicationController
   end
 
   def edit
-    #real creation of the request and sends an email to the challenged?
   end
 
   def update
+    if @challenge.update(challenge_params_edit)
+      flash[:notice] = "Succesfully created this challenge"
+      redirect_to challenge_path
+    else
+      flash.now[:alert] = "Oops.. Let's try again"
+    end
   end
 
   def destroy
@@ -41,9 +41,13 @@ class ChallengesController < ApplicationController
 
   private
 
-  def challenge_params
+  def challenge_params_new
     params.require(:challenge).permit(:activity, :email_challenger, :wager_amount)
   end 
+
+  def challenge_params_edit
+    params.require(:challenge).permit(:activity, :email_challenger, :wager_amount, :start_date, :deadline, :allotment)
+  end
 
   def create_with_user
     @challenge.creator = current_user
@@ -65,6 +69,9 @@ class ChallengesController < ApplicationController
       flash[:alert] = "blabla wrong params"
       render :new
     end
+  end
 
+  def set_challenge
+    @challenge = Challenge.find(params[:id])
   end
 end

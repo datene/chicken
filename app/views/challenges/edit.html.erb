@@ -1,1 +1,35 @@
-<h1>Hier komen de drie beantwoorde vragen uit de new pagina en dan kan je met extra vragen een vriend uitnodigen!</h1>
+  <div class="new_challenge">
+    <%=simple_form_for @challenge do |f| %>
+    <div  class="q1 col-xs-12 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
+
+      <p>How do you want to name your challenge?</p>
+      <%= f.input :name, placeholder: "The most awesome hiking challenge ever" %>
+
+      <p>What do you want to do more often?</p>
+      <%= f.input :activity, placeholder: "hiking" %>
+
+      <p>How many hours are you planning on doing this per week?</p>
+      <%= f.input :allotment,input_html: { min: '0' }, placeholder: "3 hours" %>
+
+      <p>Who do you want to do it with?</p>
+      <%= f.input :name_challenger, placeholder: "Hank" %>
+      <%= f.input :email_challenger, placeholder: "hank@hank.com"%>
+
+      <p>How confident are you?</p>
+      <%= f.input :wager_amount, input_html: { min: '0', step: 5 }, placeholder: "30 euros" %>
+
+      <p>What do you want to do with the money?</p>
+      <%= f.input :wager_description, placeholder: "Dinner on 25 december" %>
+
+      <p>When do you want to start the challenge?</p>
+      <%= f.input :start_date, as: :date_picker, :label => 'Date field', input_html: {data: {date_options: {defaultDate: Date.today}}} %>
+
+
+      <p>Your challenge wil be ending on: </p>
+      <%#= (@challenge.start_date) %>
+
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+
