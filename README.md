@@ -39,8 +39,10 @@ ___________________________________________________________
 EXTRA TO DO :
 
 - [ ] Change the end date to dd/mm/yy instead of a full stamp
-
-
+- [ ] Add styling to email
+- [ ] edit and new challenge: styling
+- [ ] show challenge: balken moeten kloppen, + score meter
+- [ ] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
 
 _________________________________________________________
 
@@ -48,12 +50,12 @@ _________________________________________________________
 
 # MoSCoW
 ## Must have: 
-create a user
-Invite a second user
-Creation of Challenge
-See challenge
-Log time spent
-See score
+create a user//
+Invite a second user//
+Creation of Challenge//
+See challenge//
+Log time spent//
+See score//
 
 ## Should have
 fancy stats @ index
