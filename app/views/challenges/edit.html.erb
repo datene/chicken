@@ -25,9 +25,8 @@
       <%= f.input :start_date, as: :date_picker, :label => 'Date field', input_html: {data: {date_options: {defaultDate: Date.today}}} %>
 
 
-      <p>Your challenge wil be ending on: </p>
-      <%#= (@challenge.start_date) %>
-
+      <p>Your challenge wil be ending on: </p><span id='deadline'></span>
+      
       <%= f.submit %>
       <% end %>
     </div>
