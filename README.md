@@ -3,16 +3,16 @@ As a user
 - [x] create a migration to change datetime to date!!!
 
 
-- [ ] CREATE CHALLENGE CONTROLLER : 
+- [x] CREATE CHALLENGE CONTROLLER : 
 - [x] I can create a challenge: (Challlenger controller new + create) 
-- [ ] edit a challenge
+- [x] edit a challenge
 - [ ]  in which I can invite  a friend by email
-- [ ] with the wager and the wager should have a amount / description / name
-- [ ] with a deadline 
-- [ ] with an allotment
-- [ ] with an opponent
-- [ ] with an activity
-- [ ] with a name 
+- [x] with the wager and the wager should have a amount / description / name
+- [x] with a deadline 
+- [x] with an allotment
+- [x] with an opponent
+- [x] with an activity
+- [x] with a name 
 
 - [ ] I can accept a challenge (challenge controller accept)
 - [ ] I can decline a challenge(challenge controller decline)
