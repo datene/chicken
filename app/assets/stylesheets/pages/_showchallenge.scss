@@ -1,0 +1,63 @@
+.challenge_status h1 {
+  color: $black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.avatarbox {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  width: 400px;
+}
+
+.avatarbox .avatar {
+  border: 3px solid white;
+}
+
+.avatarbox .creator {
+  position: absolute;
+  left: 100px;
+  z-index: 999;
+}
+
+.avatarbox .challenger {
+  position: absolute;
+  right: 100px;
+  z-index: 1;
+}
+
+.box-item {
+  flex: 0 0 20%;
+}
+
+.playerbox {
+  display: flex;
+  justify-content: center;
+}
+
+.player-item {
+  font-size: 20pt;
+  color: #B7B6B6;
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+.grey {
+  color: #D6D6D6;
+}
+
+.wager {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creator {
+  flex: 0 0 20%;
+  color: $red;
+}
+
+.challenger {
+  flex: 0 0 20%;
+  color: $blue;
+}

@@ -1,9 +1,13 @@
 /* Main class */
 .navbar-wagon {
   background: transparent;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   transition: all 0.3s ease;
   display: flex;
-  height: 70px;
+  height: 120px;
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
@@ -35,6 +39,10 @@
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
+}
+
+.yellow_dropdown {
+  color: $brand-color;
 }
 
 /* Navbar standard link */
