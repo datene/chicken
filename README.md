@@ -37,7 +37,7 @@ ___________________________________________________________
 
 EXTRA TO DO :
 
-- [ ] Change the end date to dd/mm/yy instead of a full stamp
+- [ ] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
 - [ ] Add styling to email
 - [ ] edit and new challenge: styling
 - [ ] show challenge: balken moeten kloppen, + score meter
