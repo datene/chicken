@@ -1,3 +1,51 @@
 .question {
   height: 100vh;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+}
+
+.new_challenge {
+  color: white;
+  padding: 0px 0px;
+  margin: 0px;
+  background-color: $brand-color;
+}
+
+.challenge_activity {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: 0px;
+}
+
+.challenge_email_challenger {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: 0px;
+}
+
+.challenge_wager_amount {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: 0px;
+}
+
+.summary_submit {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  height: 60px;
+  font-size: 20pt;
+  margin: 0px;
+}
+
+.question .control-label {
+  display: none;
 }
