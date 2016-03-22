@@ -238,6 +238,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener_web (~> 1.2.0)
   momentjs-rails (~> 2.9)!
+  nokogiri
   omniauth-facebook
   pg
   premailer-rails (~> 1.9)
