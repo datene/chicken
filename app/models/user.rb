@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :challenges
+  has_many :challenges, foreign_key: "creator_id"
   has_many :messages
   has_many :checkpoints, through: :challenges
   

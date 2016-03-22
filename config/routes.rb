@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :challenges, except: [:index] do
     resources :messages, only: [:index, :new, :create, :destroy]
     resources :checkpoints, only: [:index]
+    resources :logged_times, only: [:new, :create]
+    
     member do
       patch :accept
       patch :decline
