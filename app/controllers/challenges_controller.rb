@@ -1,5 +1,13 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:edit, :update, :destroy, :accept, :decline, :concede]
+  before_action :set_challenge, only: [:edit, :show, :update, :destroy, :accept, :decline, :concede]
+
+  def show 
+    if @challenge.challenger_id.nil?
+      flash[:notice] = "The challenger has not yet accepted your challenge!"
+    else 
+      render :show
+     end 
+  end
 
   def new
     @challenge = Challenge.new
@@ -63,7 +71,7 @@ class ChallengesController < ApplicationController
 
   def create_without_user
     if @challenge.valid?
-      session[:new_challenge] = challenge_params.to_hash
+      session[:new_challenge] = challenge_params_new.to_hash
       redirect_to new_user_session_path
       # redirect_to user_omniauth_authorize_path(:facebook)
     else
