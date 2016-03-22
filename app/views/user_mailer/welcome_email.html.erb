@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Chicken - Email </title>
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   <link rel="stylesheets/pages" type="text/css" href="_email.scss">
+
+  <!-- CSS -->
+  <style type="text/css">
+    html{
+      width: 100%;
+    }
+
+    body{
+      width: 100%;
+      margin:0;
+      padding:0;
+      -webkit-font-smoothing: antialiased;
+      mso-margin-top-alt:0px;
+      mso-margin-bottom-alt:0px;
+      mso-padding-alt: 0px 0px 0px 0px;
+      background: #E7E7E7;
+    }
+
+    p,h1,h2,h3,h4{
+      margin-top:0;
+      margin-bottom:0;
+      padding-top:0;
+      padding-bottom:0;
+    }
+
+    table{
+      font-size: 14px;
+      border: 0;
+    }
+
+    img{
+      border: none!important;
+    }
+  </style>
+
+  <!-- Responsive CSS -->
+  <style type="text/css">
+    @media only screen and (max-width: 600px) {
+      body[yahoo] .full_width {width:90% !important;}
+    }
+
+    @media only screen and (max-width: 700px) {
+      body[yahoo] .full_width_col {width:100% !important;}
+      body[yahoo] .txt_center {text-align:center !important;}
+      body[yahoo] .separator {height: 40px !important;}
+    }
+  </style>
 </head>
+
+
 <body>
   <img src="/assets/chicken-9506063c67648a45d0101cafa2175a62b79de634001fc25de84624a81cc2167f.png" alt="Chicken">
+
+
+<!-- Header -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#ffffff" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; background-color:#ffffff; border-bottom: 5px; border-bottom-style: solid; border-bottom-color: #f7f6f6;">  <tr>
+
+
   <div style="color: #FDB631; font-family: verdana">
+    <h1>Chicken</h1>
     <h1 style="color: black;">Hey <%= @challenge.name_challenger %>!</h1>
     <p>
       You have been challenged by <%= @creator.first_name %> <%= @creator.last_name %>. </p>
@@ -34,3 +93,4 @@
 
     </body>
     </html>
+
