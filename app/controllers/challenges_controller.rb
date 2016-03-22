@@ -71,7 +71,7 @@ class ChallengesController < ApplicationController
 
   def create_without_user
     if @challenge.valid?
-      session[:new_challenge] = challenge_params.to_hash
+      session[:new_challenge] = challenge_params_new.to_hash
       redirect_to new_user_session_path
       # redirect_to user_omniauth_authorize_path(:facebook)
     else

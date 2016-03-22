@@ -32,15 +32,7 @@ $(document).on('ready page:change', function() {
   $(".datetimepicker").on("dp.change", function (e) {
     var date = e.date
     var deadline = moment(date).add(4, 'weeks')
-    var deadline_good = deadline._d
-    var twoDigitMonth = deadline_good.getMonth()+"";if(twoDigitMonth.length==1)  twoDigitMonth="0" +twoDigitMonth;
-    var twoDigitDate = deadline_good.getDate()+"";if(twoDigitDate.length==1) twoDigitDate="0" +twoDigitDate;
-    var currentDate = twoDigitDate + "/" + twoDigitMonth + "/" + deadline_good.getFullYear();
-// console.log(currentDate);
-$('#deadline').html(currentDate)
-
-
-    // $('#deadline').html(deadline._d)
-
+    var configured = moment(deadline._d).format("dddd Do MMMM YYYY")
+    $('#deadline').html(configured)
   });
 });

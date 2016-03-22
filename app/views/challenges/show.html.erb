@@ -1,7 +1,7 @@
 <div class="wrap_white">
   <div class="challenge_status">
     <div class="avatarbox">
-      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item creator borderavatar" %>
+      <%= image_tag @challenge.creator.picture, class: "avatar box-item creator borderavatar" %>
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item challenger borderavatar" %>
     </div>
     <h1><%=@challenge.activity.upcase%></h1>
@@ -20,7 +20,7 @@
     <h2>score</h2>
     <div class="avatarbox allotment">
       <div class="blackglow"></div>
-      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>
+      <%= image_tag @challenge.creator.picture, class: "avatar box-item" %>
       <div class="alloted"><%= @challenge.allotment %></div>
       <div class="blackglow"></div>
       <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>

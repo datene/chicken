@@ -16,6 +16,6 @@ Challenge.create!(name: 'Running Challenge', activity: 'running', wager_amount: 
 Challenge.create!(name: 'Painting Challenge', activity: 'painting', wager_amount: 60, wager_description: 'most awesome challenge ever known', wager_name: 'too much money wager', allotment: 2, status: 'accepted', deadline: Date.today + 4.weeks, start_date: Date.today )
 Challenge.create!(name: 'Meditating Challenge', activity: 'meditate', wager_amount: 20, wager_description: 'most awesome challenge ever known', wager_name: 'goalClub', allotment: 3, status: 'accepted', deadline: Date.today + 4.weeks, start_date: Date.today )
 
-User.create!(first_name: "Lars", last_name: "Bohm", photo_url: "", email: "lars@lars.nl", password: "whatever")
-User.create!(first_name: "Lena", last_name: "Hartog", photo_url: "", email: "lena@lena.nl", password: "whatever")
-User.create!(first_name: "Michele", last_name: "de Bruyn", photo_url: "", email: "michele@michele.nl", password: "whatever")
+User.create!(first_name: "Lars", last_name: "Bohm", picture: "", email: "lars@lars.nl", password: "whatever")
+User.create!(first_name: "Lena", last_name: "Hartog", picture: "", email: "lena@lena.nl", password: "whatever")
+User.create!(first_name: "Michele", last_name: "de Bruyn", picture: "http://dreamatico.com/data_images/kitten/kitten-1.jpg", email: "michele@michele.nl", password: "whatever")
