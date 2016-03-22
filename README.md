@@ -1,8 +1,6 @@
 As a user
 
 - [x] create a migration to change datetime to date!!!
-
-
 - [x] CREATE CHALLENGE CONTROLLER : 
 - [x] I can create a challenge: (Challlenger controller new + create) 
 - [x] edit a challenge
@@ -18,7 +16,8 @@ As a user
 - [ ] I can decline a challenge(challenge controller decline)
 - [ ] I can concede a challenge(challenge controller concede)
  
-- [x] I can see my own activity/ I can see my own profile / I can list my challenges ( challenges index which redirects to /dashboard)
+- [x] I can route to my dashboard!
+- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 
 - [x] I can login (devise login)
 - [x] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
@@ -38,22 +37,25 @@ ___________________________________________________________
 
 EXTRA TO DO :
 
-- [ ] Change the end date to dd/mm/yy instead of a full stamp
-
-
-
+- [ ] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
+- [ ] Add styling to email
+- [ ] edit and new challenge: styling
+- [ ] show challenge: balken moeten kloppen, + score meter
+- [ ] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
+- [ ] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word 
+- [ ] waarden in show aanpassen aan ingevulde velden
 _________________________________________________________
 
 
 
 # MoSCoW
 ## Must have: 
-create a user
-Invite a second user
-Creation of Challenge
-See challenge
-Log time spent
-See score
+create a user//
+Invite a second user//
+Creation of Challenge//
+See challenge//
+Log time spent//
+See score//
 
 ## Should have
 fancy stats @ index

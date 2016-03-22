@@ -1,16 +1,30 @@
 <div class="wrap_white">
-  <div class="challenge_status col-xs-offset-4 col-xs-4 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
+  <div class="challenge_status">
     <div class="avatarbox">
-      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item creator" %>
-      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item challenger" %>
+      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item creator borderavatar" %>
+      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item challenger borderavatar" %>
     </div>
     <h1>BOWLING</h1>
     <div class="playerbox">
       <p class="player-item">Lars</p><p class="player-item grey">vs</p><p class="player-item">Lena</p>
     </div>
   </div>
-  <div class="wagers col-xs-12">
-    <div class="wager creator"><p class="euro">&#8364; 50</p></div>
-    <div class="wager challenger"><p class="euro">&#8364; 50</p></div>
+  <div class="wagers">
+    <div class="wager creator"><div class="euro">&#8364;</div><div>50</div></div>
+    <div class="wager filler"></div>
+    <div class="wager challenger"><div class="euro">&#8364;</div><div>50</div></div>
   </div>
+  <div class="creatorwagerbar"></div>
+  <div class="challengerwagerbar"></div>
+  <div class="score">
+    <h2>score</h2>
+    <div class="avatarbox allotment">
+    <div class="blackglow"></div>
+      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>
+      <div class="alloted">3</div>
+      <div class="blackglow"></div>
+      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item" %>
+    </div>
+  </div>
+  <div class="add_score">+</div>
 </div>
