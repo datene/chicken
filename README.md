@@ -23,7 +23,7 @@ As a user
 - [x] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
  
 - [ ] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
-- [ ] I can log my hours spend on the activity (Logged_time controller new usage of Ajax if possible(see lecture reviews) )
+- [x] I can log my hours spend on the activity (Logged_time controller new usage of Ajax if possible(see lecture reviews) )
 
 - [ ] I can chat to my opponents (messages controller index new destroy)
 - [ ] I get weekly updates through email (email verification api verhaal)
@@ -37,13 +37,14 @@ ___________________________________________________________
 
 EXTRA TO DO :
 
-- [ ] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
+- [x] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
 - [ ] Add styling to email
 - [ ] edit and new challenge: styling
 - [ ] show challenge: balken moeten kloppen, + score meter
 - [ ] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
-- [ ] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word 
-- [ ] waarden in show aanpassen aan ingevulde velden
+- [ ] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word (colom xs die reageert ergens)
+- [x] waarden in show aanpassen aan ingevulde velden
+- [ ] my logged hours change the size of my image
 _________________________________________________________
 
 
