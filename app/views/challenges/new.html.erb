@@ -1,24 +1,23 @@
-  <div class="new_challenge">
-    <%=simple_form_for @challenge do |f| %>
-    <div id="q1" class="question col-xs-12 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
-      <p>What do you want to do more often?</p>
-    <%= f.input :activity %>
-    </div>
-    <div id="q2" class="question col-xs-12 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
-      <p>Who do you want to do it with?</p>
-    <%= f.input :email_challenger %>
-    </div>
-    <div id="q3" class="question col-xs-12 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4">
-      <p>How confident are you?</p>
-    <%= f.input :wager_amount %>
-    </div>
-    <div id="su" class="summary col-xs-12 col-sm-offset-4 col-sm-4 col-lg-offset-4 col-lg-4"> 
-      <p>summary</p>
-    <%= f.submit %>
+<div class="new_challenge">
+  <%=simple_form_for @challenge do |f| %>
+  <div id="q1" class="question">
+    <p>What do you want to do more often?</p>
+    <%= f.input :activity, class: "new_challenge_input" %>
+  </div>
+  <div id="q2" class="question">
+    <p>Who do you want to do it with?</p>
+    <%= f.input :email_challenger, class: "new_challenge_input" %>
+  </div>
+  <div id="q3" class="question">
+    <p>How confident are you?</p>
+    <%= f.input :wager_amount, class: "new_challenge_input" %>
+  </div>
+  <div id="su" class="question summary"> 
+    <p>summary</p>
+    <%= f.submit "Let's do it!", class: "summary_submit" %>
     <% end %>
   </div>
-    <h1>THIS IS de drie vragen die eigenlijk onze root zijn</h1>
+</div>
 
 
-  </div>
-
+<!-- text-transform: uppercase;!!!!!!!!!!!!!!! -->
