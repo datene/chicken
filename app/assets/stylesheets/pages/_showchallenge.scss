@@ -148,9 +148,14 @@
 }
 
 .blackglow {
+  height: 100px;
+  width: 100px;
   position: absolute;
   border-radius: 50%;
   background-color: black;
   opacity: 0.2;
   z-index: 999;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
