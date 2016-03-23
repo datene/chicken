@@ -10,21 +10,9 @@
     </div>
   </div>
   <div class="wagers">
-  <!-- Deze waarden moeten vanuit de controller worden aangeleverd -->
-
-      <% @imagestyle_creator_ratio     = 0.7 %>
-      <% @imagestyle_challenger_ratio  = 1.3 %>
-
-      <% current_amount_creator = @challenge.wager_amount * @imagestyle_creator_ratio %>
-      <% current_amount_challenger = @challenge.wager_amount * @imagestyle_challenger_ratio %>
-
-      <% @creator_bar_value    = 50 * @imagestyle_creator_ratio %>
-      <% @challenger_bar_value = 50 * @imagestyle_challenger_ratio %>
-      
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-      <div class="wager creator"><div class="euro">&#8364;</div><div><%= current_amount_creator.round %></div></div>
+      <div class="wager creator"><div class="euro">&#8364;</div><div><%= @current_amount_creator.round %></div></div>
     <div class="wager filler"></div>
-    <div class="wager challenger"><div class="euro">&#8364;</div><div><%= current_amount_challenger.round %></div></div>
+    <div class="wager challenger"><div class="euro">&#8364;</div><div><%= @current_amount_challenger.round %></div></div>
   </div>
   <div class="creatorwagerbar" style="width: <%= @creator_bar_value  %>%;"></div>
   <div class="challengerwagerbar" style="width: <%= @challenger_bar_value  %>%;"></div>
@@ -32,10 +20,10 @@
     <h2>score</h2>
     <div class="avatarbox-score allotment">
 
-      <div class="blackglow" style=<%= @imagestyle_creator %>></div>
+      <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_creator_ratio})" %>"> <%#= logged_time.amount %></div>
       <%= image_tag @challenge.creator.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_creator_ratio})" %>
       <div class="alloted"><%= @challenge.allotment %></div>
-      <div class="blackglow" style=<%= @imagestyle_challenger %>></div>
+      <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_challenger_ratio})" %>"> 20 </div>
       <%= image_tag "http://placehold.it/150x150", class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})"%>
     </div>
   </div>

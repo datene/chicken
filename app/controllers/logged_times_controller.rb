@@ -7,13 +7,13 @@ class LoggedTimesController < ApplicationController
   def create
     amount = params[:amount]
     LoggedTime.create!(challenge: @challenge, user: current_user, amount: amount)
-
   end
 
   private
 
   def set_challenge
     # FIXME: find in all your challenges (as creator or challenger)
+    # current_user == challenger_id 
     @challenge = current_user.challenges.find(params[:challenge_id])
   end
 end
