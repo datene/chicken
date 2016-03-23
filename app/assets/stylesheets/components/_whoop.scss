@@ -1,0 +1,31 @@
+.whoop-container {
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  right: 0;
+  bottom: 0;
+  transform: translateY(calc(100% - 56px ));
+  z-index: 99999;
+  transition: transform 500ms ease;
+  .add_score {
+    overflow: hidden;
+  }
+  .add_score span {
+    display: block;
+    transition: transform 500ms ease;
+    transform: rotate(0);
+    
+  }
+  &.is-open {
+    transform: translateY(0%);
+
+    .add_score span {
+      transform: rotate(45deg);
+
+    }
+  }
+
+}
