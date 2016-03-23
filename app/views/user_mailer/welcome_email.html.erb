@@ -37,6 +37,7 @@
     img{
       border: none!important;
     }
+
   </style>
 
   <!-- Responsive CSS -->
@@ -55,42 +56,168 @@
 
 
 <body>
-  <img src="/assets/chicken-9506063c67648a45d0101cafa2175a62b79de634001fc25de84624a81cc2167f.png" alt="Chicken">
+
+<!-- $brand-color: #FFD464;
+
+$red: #EC6965;
+$blue: #1653A1;
+$yellow: #FDB631;
+$orange: #E67E22;
+$green: #32B796;
+$black: #333333; -->
 
 
 <!-- Header -->
 
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#ffffff" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; background-color:#ffffff; border-bottom: 5px; border-bottom-style: solid; border-bottom-color: #f7f6f6;">  <tr>
+<!--  Header  -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#ffffff" style="border-collapse:collapse; border:0; background-color:#ffffff; border-bottom-style: solid; border-bottom-color: #f7f6f6;">  <tr>
+  <td align="center">
+
+    <table class="full_width_col" width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="border-collapse:collapse; border:0; background-color:#ffffff;">
+      <tr><td height="50" width="100%" style="height:15px;"></td></tr>
+      <tr>
+        <td>
+
+          <!--  Header Logo  -->
+          <table class="full_width_col txt_center" width="150" align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:0;">
+            <tr>
+              <td>
+                <a href="#">
+                  <img src="/assets/chicken-9506063c67648a45d0101cafa2175a62b79de634001fc25de84624a81cc2167f.png" alt="Chicken" title="Chicken" border="0" style="color: #595959; font-family: Helvetica, Arial, sans-serif; font-size: 22px;"/>
+                </a>
+              </td>
+            </tr>
+            <tr><td class="separator" height="1" width="1"></td></tr>
+          </table>
+          <!--  End Header Logo  -->
+
+        </td>
+      </tr>
+      <tr><td height="50" width="100%" style="height:15px;"></td></tr>
+    </table>
+
+  </td>
+</tr>
+</table>
+<!--  End Header  -->
 
 
-  <div style="color: #FDB631; font-family: verdana">
-    <h1>Chicken</h1>
-    <h1 style="color: black;">Hey <%= @challenge.name_challenger %>!</h1>
-    <p>
-      You have been challenged by <%= @creator.first_name %> <%= @creator.last_name %>. </p>
-      <p> <%= @creator.first_name %> is curious to find out if both of you can manage to...
-      </p>
-      <ul>
-        <li>Go <span style="color: black;"> <%= @challenge.activity %> </span> </li>
-        <li> <span style="color: black;"> <%= @challenge.allotment %> </span> times a week </li>
-        <li> for the next <span style="color: black;"> 4 </span> weeks. </li>
-        <p> You place a bet of <%= @challenge.wager_amount %> euro.</p>
-        <p> Succeed? You get the full <%= @challenge.wager_amount %> back. </p>
-        <p> Chicken out? <%= @creator.first_name %> wins your money. </p>
+<!--  Billboard  -->
+<table border="0" cellpadding="0" cellspacing="0"  width="100%" align="center" background="http://pixelhint.com/demo/woodland/images/hero.jpg" bgcolor="fcfbfb" style=" background-color:#fcfbfb;">
+  <tr><td height="154" width="100%" style="height:145px;"></td></tr>
+  <tr>
+    <td>
 
-      </ul>
-    </div>
+<!-- Placeholder-->
+        <img src="http://placehold.it/150x150" alt="150x150" style="position: absolute; z-index: 999; top: 50px; width: 150px; height: 150px; border-radius: 50%; text-align: center; margin: 44%; margin-top: 10px">
 
-    <div style="background-color: #FDB631;">
-      <p>
-        To login to the site, just follow this link: <%= link_to "see your challenge", root_path %>.
-      </p>
 
-      <p>Thanks for joining and have a great day!</p>
+      <!--  Caption  -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align:center; color: #3d5153; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; text-transform:uppercase;">
+        <tr>
+          <td>Hey <%= @challenge.name_challenger %>, <%= @creator.first_name %> is challenging you.</td>
+        </tr>
+      </table>
+      <!--  End Caption  -->
 
-      <a href="http://localhost:3000/">Let's do it</a>
+    </td>
+  </tr>
+  <tr><td height="20" width="100%" style="height:20px;"></td></tr>
+  <tr>
+    <td>
 
-    </body>
-    </html>
+      <!--  Tagline  -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align:center; color: #3d5153; font-family: 'Open Sans', Verdana, sans-serif; font-size: 14px; font-weight: 400;">
+        <tr>
+          <td> Do you wanna go <%= @challenge.activity %> <%= @challenge.allotment %> hours a week
+            for the next 4 weeks?
+          </td>
+        </tr>
+      </table>
+      <!--  End Tagline  -->
+    </td>
+  </tr>
+
+  <tr><td height="40" width="100%" style="height:40px;"></td></tr>
+  <tr>
+    <td align="center">
+
+      <!--  Let's do it Button  -->
+      <table border="0" align="center" width="240" cellpadding="0" cellspacing="0" class="button_color button_shadow" bgcolor="8ec940" style="border-radius: 50px; text-transform:uppercase; text-align:center; background-color: #FDB631;">
+        <tr><td height="20" width="100%" style="height:20px;"></td></tr>
+        <tr>
+          <td><a href="#" style="display:block; text-decoration:none; color: #fff; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700; letter-spacing:1px;">Let's do it</a></td>
+        </tr>
+        <tr><td height="20" width="100%" style="height:20px;"></td></tr>
+      </table>
+      <!--  Let's do it Button  -->
+
+    </td>
+  </tr>
+  <tr><td height="154" width="100%" style="height:145px;"></td></tr>
+</table>
+<!--  End Billboard  -->
+
+
+
+
+<!--  Footer  -->
+<table class="full_width_700" border="0" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="fbfbfb" style="border-collapse:collapse; border:0; background-color:#fbfbfb; border-top: 5px; border-top-style: solid; border-top-color: #f7f6f6;">
+  <tr>
+    <td align="center">
+
+      <table class="full_width_col" width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0;">
+        <tr><td height="80" width="100%" style="height:80px;"></td></tr>
+        <tr>
+          <td>
+
+            <!--  Copyrights  -->
+            <table class="full_width_col txt_center" width="400" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; border:0; text-align:left;">
+
+              <tr><td height="30" width="100%" style="height:30px;"></td></tr>
+              <tr>
+                <td style="color: #7d8080; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400;">
+                  Chicken ©2016
+                </td>
+              </tr>
+              <tr><td class="separator" height="1" width="1"></td></tr>
+            </table>
+            <!--  End Copyrights  -->
+
+            <!--  Social Media  -->
+            <table class="full_width_col txt_center" width="200" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; border:0; text-align:right; font-weight: 400;">
+              <tr>
+                <td>
+                  <a href="#" style="color: #FDB631; text-decoration:none;">
+                    <img src="http://pixelhint.com/demo/woodland/images/facebook.png" alt="Facebook" title="Facebook" border="0"/>
+                  </a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" style="color: #FDB631; text-decoration:none;">
+                    <img src="http://pixelhint.com/demo/woodland/images/twitter.png" alt="Twitter" title="Twitter" border="0"/>
+                  </a>
+                </td>
+              </tr>
+            </table>
+            <!--  End Social Media  -->
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+  <tr><td height="80" width="100%" style="height:80px;"></td></tr>
+</table>
+<!--  End Footer  -->
+
+
+
+
+
+
+
+
+</body>
+</html>
 
