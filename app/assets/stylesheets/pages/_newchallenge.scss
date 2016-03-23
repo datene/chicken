@@ -1,51 +1,70 @@
-.question {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  text-align: center;
+.challenges-new {
+  overflow: hidden;
 }
 
-.new_challenge {
+.form-control {
+  &:focus {
+    outline: 0;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
+
+.questions-container {
+  background: #FFD464;
   color: white;
-  padding: 0px 0px;
-  margin: 0px;
-  background-color: $brand-color;
 }
 
-.challenge_activity {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  margin: 0px;
+.question-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.challenge_email_challenger {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  margin: 0px;
+.question-content {
+  font-size: 25px;
+  max-width: 400px;
+
+  .no-highlight {
+    opacity: .6;
+  }
 }
 
-.challenge_wager_amount {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  margin: 0px;
+.question-input-container {
+  input {
+    height: auto;
+    padding: 15px;
+    margin-top: 25px;
+    max-width: 250px;
+  }
+}
+
+.question-next-button {
+  a {
+    color: white;
+    background: rgba(255, 255, 255, 0.24);
+    border: 2px solid white;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 19px;
+    text-decoration: none;
+
+    &:hover {
+      transition: all 200ms ease;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
 .summary_submit {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  background-color: #333333;
-  color: white;
   border: none;
-  height: 60px;
-  font-size: 20pt;
-  margin: 0px;
-}
+  margin-top: 20px;
+  background-color: $blue;
+  border-radius: 5px;
 
-.question .control-label {
-  display: none;
+  &:hover {
+    transition: all 200ms ease;
+  }
 }
