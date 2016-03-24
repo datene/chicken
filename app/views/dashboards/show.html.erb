@@ -5,19 +5,18 @@
     ALL YOUR CHALLENGES
   </h1>
   <ul>
-    <h2>
-    <%= image_tag current_user.picture %>
+
+    <%= image_tag current_user.picture, class:"avatar" %>
       <%= current_user.first_name%>
       <%= current_user.last_name%>
 
-    </h2>
+    <%= @challenges.count %>
 
-
-    <% @challenges.each do |challenge|%>
-    <li>
-
-      <%= challenge.name %>
-    </li>
+    <% @challenges.each do |challenge| %>
+    <%= challenge.name %>
     <% end %>
+ 
+
+
   </ul>
 </div>
