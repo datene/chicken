@@ -4,9 +4,7 @@ module Checkpoints
       @challenge = challenge
       @week = week
     end
-## background jobs that create the checkpoints
-#fix the challenger : has to be able to join the party 
-# current_user.challenges has to be fixen 
+## TODO: background jobs that create the checkpoints
     def call
       return if checkpoint_exists?
       @weekly_amount = @challenge.wager_amount / 4.0
