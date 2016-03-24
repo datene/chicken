@@ -20,11 +20,13 @@ class ChallengesController < ApplicationController
     end_of_week = @challenge.start_date + current_week.weeks - 1.day
 
     # current week ratios
-    creator_logged_times_amount = @challenge.logged_times.where(user: @challenge.creator).between(beginning_of_week, end_of_week).sum(:amount)
-    challenger_logged_times_amount = @challenge.logged_times.where(user: @challenge.challenger).between(beginning_of_week, end_of_week).sum(:amount)
+    @creator_logged_times_amount = @challenge.logged_times.where(user: @challenge.creator).between(beginning_of_week, end_of_week).sum(:amount)
+    @challenger_logged_times_amount = @challenge.logged_times.where(user: @challenge.challenger).between(beginning_of_week, end_of_week).sum(:amount)
 
-    @imagestyle_creator_ratio = 1 + creator_logged_times_amount / (@challenge.allotment * 60).to_f
-    @imagestyle_challenger_ratio = 1 + challenger_logged_times_amount / (@challenge.allotment * 60).to_f
+
+    @imagestyle_challenger_ratio =  set_image_ratio_challenger
+    @imagestyle_creator_ratio = set_image_ratio_creator
+
 
     # after checkpoint ratios
     last_checkpoint = @challenge.checkpoints.order(week: :desc).first
@@ -160,6 +162,28 @@ class ChallengesController < ApplicationController
     if @challenge.challenger
       flash[:alert] = "This challenge is already accepted!"
       redirect_to challenge_path(@challenge)
+    end
+  end
+
+  def set_image_ratio_challenger
+    ratio = 1 + @challenger_logged_times_amount / (@challenge.allotment * 60).to_f
+
+    if ratio > 2
+      return 2
+    else
+      return ratio
+    end
+
+  end
+  
+
+  def set_image_ratio_creator
+    ratio = 1 + @creator_logged_times_amount / (@challenge.allotment * 60).to_f
+
+    if ratio > 2
+      return 2
+    else
+      return ratio
     end
   end
 end
