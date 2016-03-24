@@ -4,7 +4,9 @@ module Checkpoints
       @challenge = challenge
       @week = week
     end
+
 ## TODO: background jobs that create the checkpoints
+
     def call
       return if checkpoint_exists?
       @weekly_amount = @challenge.wager_amount / 4.0
@@ -16,16 +18,15 @@ module Checkpoints
     private
 
     def compute_score_ratios
-      allotment_in_minutes = @challenge.allotment * 60
+      allotment_in_minutes = @challenge.allotment * 60.0
 
       beginning_of_week = @challenge.start_date + (@week - 1).weeks
       end_of_week = @challenge.start_date + @week.weeks - 1.day
-
       creator_logged_times_amount = @challenge.logged_times.where(user: @challenge.creator).between(beginning_of_week, end_of_week).sum(:amount)
       challenger_logged_times_amount = @challenge.logged_times.where(user: @challenge.challenger).between(beginning_of_week, end_of_week).sum(:amount)
 
-      @creator_score_ratio = creator_logged_times_amount > 0 ? allotment_in_minutes.to_f / creator_logged_times_amount : 0
-      @challenger_score_ratio = challenger_logged_times_amount > 0 ? allotment_in_minutes.to_f / challenger_logged_times_amount : 0
+      @creator_score_ratio = creator_logged_times_amount > 0 ? creator_logged_times_amount / allotment_in_minutes : 0
+      @challenger_score_ratio = challenger_logged_times_amount > 0 ? challenger_logged_times_amount / allotment_in_minutes : 0
     end
 
     def create_checkpoint

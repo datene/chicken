@@ -12,8 +12,8 @@ $(function() {
     }
   });
 
-var executed = false;
- $('.question-container').bind('mousewheel', function(e) {
+  var executed = false;
+  $('.question-container').bind('mousewheel', function(e) {
     if (!executed) {
       executed = true;
       var delta = e.originalEvent.wheelDelta;
@@ -24,11 +24,11 @@ var executed = false;
           }, 500);
         }
       } else if (delta > 0) {
-          if($(this).data('prev')) {
-        $('html, body').animate({
+        if($(this).data('prev')) {
+          $('html, body').animate({
             scrollTop: $($(this).data('prev')).offset().top            
-        }, 500);
-          }
+          }, 500);
+        }
         
       }
 
@@ -37,7 +37,5 @@ var executed = false;
       }, 1000)
     };
 
- });
+  });
 });
-
-

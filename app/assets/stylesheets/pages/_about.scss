@@ -1,0 +1,87 @@
+.title h1 {
+  color: $black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  font-height: 50px;
+}
+
+.wrapper-about {
+  background-color: lightgrey;
+}
+
+.card__back h2 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.about_info h2, p {
+  text-align: center;
+}
+
+
+.card {
+  position: relative;
+  float: left;
+  padding-bottom: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+  background-color: #ff5078;
+}
+
+.card__back {
+  background-color: #FFD464;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.picturebox {
+  margin: 0 auto;
+  width: 970px;
+}
+
+
+
+
+
+// $brand-color: #FFD464;
+
+// $red: #EC6965;
+// $blue: #1653A1;
+// $yellow: #FDB631;
+// $orange: #E67E22;
+// $green: #32B796;
+// $black: #333333;

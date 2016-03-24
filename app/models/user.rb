@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
       user.token_expiry = Time.at(auth.credentials.expires_at)
     end
   end
+
+  def all_challenges
+    Challenge.where("creator_id = :id OR challenger_id = :id", id: id)
+  end
 end
 
 

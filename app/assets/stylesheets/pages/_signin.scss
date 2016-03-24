@@ -1,0 +1,23 @@
+.devise\/sessions-new {
+  padding-top: 130px;
+  background-color: $brand-color;
+}
+
+.login_form {
+  color: white;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 50px;
+  }
+  a {
+    color: white;
+    background-color: $blue;
+    border-radius: 2px;
+    padding: 15px;
+    display:block;
+    margin-top: 10px;
+  }
+} 
+

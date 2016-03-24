@@ -12,8 +12,6 @@ class LoggedTimesController < ApplicationController
   private
 
   def set_challenge
-    # FIXME: find in all your challenges (as creator or challenger)
-    # current_user == challenger_id 
-    @challenge = current_user.challenges.find(params[:challenge_id])
+    @challenge = current_user.all_challenges.find(params[:challenge_id])
   end
 end
