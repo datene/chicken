@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321112127) do
+ActiveRecord::Schema.define(version: 20160324142145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,10 +32,12 @@ ActiveRecord::Schema.define(version: 20160321112127) do
     t.datetime "updated_at",                            null: false
     t.string   "email_challenger"
     t.string   "name_challenger"
+    t.string   "token"
   end
 
   add_index "challenges", ["challenger_id"], name: "index_challenges_on_challenger_id", using: :btree
   add_index "challenges", ["creator_id"], name: "index_challenges_on_creator_id", using: :btree
+  add_index "challenges", ["token"], name: "index_challenges_on_token", using: :btree
 
   create_table "checkpoints", force: :cascade do |t|
     t.integer  "challenger_score"

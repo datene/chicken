@@ -13,11 +13,10 @@ Rails.application.routes.draw do
     resources :logged_times, only: [:new, :create]
     
     member do
+      get :preview
       patch :accept
       patch :decline
       patch :concede
     end
   end
-
-
 end

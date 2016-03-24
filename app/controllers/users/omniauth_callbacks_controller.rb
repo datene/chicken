@@ -5,6 +5,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       if session[:new_challenge]
         sign_in_and_create_challenge
+      elsif session[:challenge_to_accept]
+        sign_in_and_accept_challenge
       else
         sign_in_and_redirect @user, event: :authentication
         set_flash_message(:notice, :success, kind: 'Facebook') if is_navigational_format?
@@ -16,6 +18,22 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def sign_in_and_accept_challenge
+    sign_in @user
+
+    challenge_id = session[:challenge_to_accept]
+
+    challenge = Challenge.find(challenge_id)
+    challenge.status = :accepted
+    challenge.challenger = @user
+    challenge.save!
+
+    session[:challenge_to_accept] = nil
+
+    flash[:notice] = "Welcome to this challenge!"
+    redirect_to challenge_path(challenge)
+  end
 
   def sign_in_and_create_challenge
     sign_in @user

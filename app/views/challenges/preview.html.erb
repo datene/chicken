@@ -1,0 +1,6 @@
+<h1>Challenge PREVIEW</h1>
+
+<br><br><br><br><br>
+
+<%= link_to "Accept", accept_challenge_path(@challenge.token), method: :patch %>
+<%= link_to "Decline", decline_challenge_path(@challenge.token), method: :patch %>
