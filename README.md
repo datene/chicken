@@ -12,8 +12,8 @@ As a user
 - [x] with an activity
 - [x] with a name 
 
-- [ ] I can accept a challenge (challenge controller accept)
-- [ ] I can decline a challenge(challenge controller decline)
+- [x] I can accept a challenge (challenge controller accept)
+- [x] I can decline a challenge(challenge controller decline)
 - [ ] I can concede a challenge(challenge controller concede)
  
 - [x] I can route to my dashboard!
@@ -22,7 +22,7 @@ As a user
 - [x] I can login (devise login)
 - [x] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
  
-- [ ] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
+- [x] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
 - [x] I can log my hours spend on the activity (Logged_time controller new usage of Ajax if possible(see lecture reviews) )
 
 - [ ] I can chat to my opponents (messages controller index new destroy)
@@ -40,11 +40,14 @@ EXTRA TO DO :
 - [x] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
 - [ ] Add styling to email
 - [ ] edit and new challenge: styling
-- [ ] show challenge: balken moeten kloppen, + score meter
-- [ ] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
+- [x] show challenge: balken moeten kloppen, + score meter
+- [x] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
 - [ ] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word (colom xs die reageert ergens)
 - [x] waarden in show aanpassen aan ingevulde velden
-- [ ] my logged hours change the size of my image
+- [x] my logged hours change the size of my image
+- [ ] Start date not in the past!
+- [ ] Changing of the image should have a maximum
+- [ ] Get variables on Dashboard page so they can be stiled1
 _________________________________________________________
 
 
