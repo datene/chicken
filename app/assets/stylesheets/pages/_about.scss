@@ -1,0 +1,39 @@
+h1 {
+  color: $black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  font-height: 50px;
+}
+
+h2 {
+  text-align: center
+}
+
+p {
+  text-align: center;
+}
+
+
+.flipping-card-front {
+  border-top: 2px dotted black;
+  border-radius: 50%;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+// $brand-color: #FFD464;
+
+// $red: #EC6965;
+// $blue: #1653A1;
+// $yellow: #FDB631;
+// $orange: #E67E22;
+// $green: #32B796;
+// $black: #333333;
