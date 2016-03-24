@@ -39,15 +39,16 @@ EXTRA TO DO :
 
 - [x] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
 - [ ] Add styling to email
-- [ ] edit and new challenge: styling
+- [x] edit and new challenge: styling
 - [x] show challenge: balken moeten kloppen, + score meter
 - [x] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
-- [ ] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word (colom xs die reageert ergens)
+- [x] NAVBAR staat nog op stand waarbij het iets moet doen als ie klein word (colom xs die reageert ergens)
 - [x] waarden in show aanpassen aan ingevulde velden
 - [x] my logged hours change the size of my image
 - [ ] Start date not in the past!
-- [ ] Changing of the image should have a maximum
+- [x] Changing of the image should have a maximum
 - [ ] Get variables on Dashboard page so they can be stiled1
+- [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
 _________________________________________________________
 
 
