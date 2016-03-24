@@ -1,8 +1,10 @@
 .challenges-edit {
   background-color: $brand-color;
   color: white;
-  padding-top: 130px;
+  padding-top: 100px;
   padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .edit_challenge {
@@ -10,6 +12,15 @@
     font-weight: bold;
     text-align: left;
   }
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.edit_container .border {
+  border-bottom: 1px dotted white;
+  margin-bottom: 15px;
 }
 
 .datetimepicker {
