@@ -1,5 +1,12 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:edit, :show, :update, :destroy, :accept, :decline, :concede]
+  skip_before_action :authenticate_user!, only: [:new, :create, :preview, :accept, :decline]
+
+  before_action :set_challenge_by_token, only: [:preview, :accept, :decline]
+  before_action :set_challenge, only: [:edit, :show, :update, :destroy, :concede]
+  before_action :check_challenger_not_set, only: [:accept, :decline]
+  
+  def preview
+  end
 
   def show 
     if @challenge.challenger_id.nil?
@@ -46,6 +53,7 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(challenge_params_new)
+    @challenge.token = SecureRandom.hex(13)
 
     if user_signed_in?
       create_with_user
@@ -74,15 +82,38 @@ class ChallengesController < ApplicationController
   end
 
   def accept # challenger that creates this challenge and gets a profile: connect to challenger_id
+    if user_signed_in?
+      accept_with_user
+    else
+      accept_without_user
+    end
   end
 
   def decline
+    @challenge.update(status: :declined)
+    flash[:notice] = "Successfully declined. Thanks."
+    redirect_to root_path
   end
 
   def concede
   end
 
   private
+
+  def accept_with_user
+    @challenge.status = :accepted
+    @challenge.challenger = current_user
+    @challenge.save
+
+    flash[:notice] = "Welcome to this challenge!"
+    redirect_to challenge_path(@challenge)
+  end
+
+  def accept_without_user
+    session[:challenge_to_accept] = @challenge.id
+    # redirect_to new_user_session_path
+    redirect_to user_omniauth_authorize_path(:facebook)
+  end
 
   def challenge_params_new
     params.require(:challenge).permit(:activity, :email_challenger, :wager_amount)
@@ -116,5 +147,21 @@ class ChallengesController < ApplicationController
 
   def set_challenge
     @challenge = Challenge.find(params[:id])
+  end
+
+  def set_challenge_by_token
+    @challenge = Challenge.where(status: "pending", token: params[:id]).first
+
+    unless @challenge
+      flash[:alert] = "Don't know what you're talking about :D"
+      redirect_to root_path
+    end
+  end
+
+  def check_challenger_not_set
+    if @challenge.challenger
+      flash[:alert] = "This challenge is already accepted!"
+      redirect_to challenge_path(@challenge)
+    end
   end
 end

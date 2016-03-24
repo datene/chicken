@@ -2,11 +2,11 @@
   <div class="challenge_status">
     <div class="avatarbox">
       <%= image_tag @challenge.creator.picture, class: "avatar box-item creator borderavatar" %>
-      <%= image_tag "http://placehold.it/150x150", class: "avatar box-item challenger borderavatar" %>
+      <%= image_tag @challenge.challenger.picture, class: "avatar box-item challenger borderavatar" %>
     </div>
     <h1><%=@challenge.activity.upcase%></h1>
     <div class="playerbox">
-      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item">Lena</p> <%#DIT IS EVEN LASTIG..DIEGENE MOET OOK EEN ACCOUNT HEBBEN ANDERS werkt het niet, only show if challenge.accept%> <%# if it works: <%= @challenge.challenger.first_name %>
+      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item"><%= @challenge.challenger.first_name %></p> <%#DIT IS EVEN LASTIG..DIEGENE MOET OOK EEN ACCOUNT HEBBEN ANDERS werkt het niet, only show if challenge.accept%> 
     </div>
   </div>
   <div class="wagers">
@@ -24,7 +24,7 @@
       <%= image_tag @challenge.creator.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_creator_ratio})" %>
       <div class="alloted"><%= @challenge.allotment %></div>
       <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_challenger_ratio})" %>"> 20 </div>
-      <%= image_tag "http://placehold.it/150x150", class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})"%>
+      <%= image_tag @challenge.challenger.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})"%>
     </div>
   </div>
   <div class="whoop-container">
