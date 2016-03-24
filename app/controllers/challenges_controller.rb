@@ -4,9 +4,40 @@ class ChallengesController < ApplicationController
   def show 
     if @challenge.challenger_id.nil?
       flash[:notice] = "The challenger has not yet accepted your challenge!"
-    else 
-      render :show
-     end 
+    end 
+
+    today = Date.current
+    current_week = ((today - @challenge.start_date) / 7).ceil
+
+    beginning_of_week = @challenge.start_date + (current_week - 1).weeks
+    end_of_week = @challenge.start_date + current_week.weeks - 1.day
+
+    # current week ratios
+    creator_logged_times_amount = @challenge.logged_times.where(user: @challenge.creator).between(beginning_of_week, end_of_week).sum(:amount)
+    challenger_logged_times_amount = @challenge.logged_times.where(user: @challenge.challenger).between(beginning_of_week, end_of_week).sum(:amount)
+
+    @imagestyle_creator_ratio = 1 + creator_logged_times_amount / (@challenge.allotment * 60).to_f
+    @imagestyle_challenger_ratio = 1 + challenger_logged_times_amount / (@challenge.allotment * 60).to_f
+
+    # after checkpoint ratios
+    last_checkpoint = @challenge.checkpoints.order(week: :desc).first
+
+    if last_checkpoint
+      weekly_amount = @challenge.wager_amount / 4.0
+      remaining_wager = ((4 - last_checkpoint.week) * weekly_amount)
+
+      @current_amount_creator = remaining_wager + last_checkpoint.creator_score
+      @current_amount_challenger = remaining_wager + last_checkpoint.challenger_score 
+
+      @creator_bar_value    = (100 * @current_amount_creator) / (2 * @challenge.wager_amount)
+      @challenger_bar_value = 100 - @creator_bar_value
+    else
+      @current_amount_creator = @challenge.wager_amount
+      @current_amount_challenger = @challenge.wager_amount 
+
+      @creator_bar_value    = 50 
+      @challenger_bar_value = 50 
+    end
   end
 
   def new
@@ -27,9 +58,12 @@ class ChallengesController < ApplicationController
   end
 
   def update
-    if @challenge.update(challenge_params_edit)
+    @challenge.assign_attributes(challenge_params_edit)
+    @challenge.deadline = @challenge.start_date + 4.weeks
+
+    if @challenge.save 
       flash[:notice] = "Succesfully created this challenge"
-      UserMailer.welcome_email(@challenge).deliver_now
+      # UserMailer.welcome_email(@challenge).deliver_now
       redirect_to challenge_path
     else
       flash.now[:alert] = "Oops.. Let's try again"
