@@ -111,7 +111,6 @@ class ChallengesController < ApplicationController
 
   def accept_without_user
     session[:challenge_to_accept] = @challenge.id
-    # redirect_to new_user_session_path
     redirect_to user_omniauth_authorize_path(:facebook)
   end
 
@@ -138,7 +137,6 @@ class ChallengesController < ApplicationController
     if @challenge.valid?
       session[:new_challenge] = challenge_params_new.to_hash
       redirect_to new_user_session_path
-      # redirect_to user_omniauth_authorize_path(:facebook)
     else
       flash[:alert] = "blabla wrong params"
       render :new
