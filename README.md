@@ -51,7 +51,7 @@ EXTRA TO DO :
 - [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
 - [ ] NAVBAR goed doorlinken en stylen
 - [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
-- 
+
 _________________________________________________________
 
 
