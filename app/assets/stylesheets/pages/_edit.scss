@@ -1,0 +1,25 @@
+.challenges-edit {
+  background-color: $brand-color;
+  color: white;
+  padding-top: 130px;
+  padding-bottom: 80px;
+}
+
+.edit_challenge {
+  p {
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.datetimepicker {
+  color: $red;
+}
+
+.submit_edit_form {
+  margin-top: 20px;
+  background-color: $blue;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+}
