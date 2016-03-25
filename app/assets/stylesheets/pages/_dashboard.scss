@@ -37,11 +37,32 @@
 
 .challenges_index {
   padding-top: 20px;
-  background-color: #EC6965;
+  background-color: $red;
   height: 100vh;
 }
 
 .challenges_amount {
   font-size: 23px;
   color: white;
+}
+
+.index-challenge-card {
+  height: 175px;
+  width: 100%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-color: $brand-color;
+  color: white;
+  position: relative;
+}
+
+.challenge-specs {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.status {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
