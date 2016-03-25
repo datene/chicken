@@ -1,6 +1,7 @@
 $(document).on('ready page:change', function() {
+  var minDate = moment()._d
   $('.datetimepicker').datetimepicker({
-    // put here your custom picker options, that should be applied for all pickers
+    minDate: moment().toDate(),
     icons: {
       date: 'fa fa-calendar',
       time: 'fa fa-clock-o',
