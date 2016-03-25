@@ -1,17 +1,29 @@
 .button-times { 
-  display: block;
   color: white;
   height: 100px;
   width: 300px;
   background: #EC6965;
-  border: 2px solid rgba(33, 68, 72, 0.59);
+  border-radius: 10px;
+  p {
+    height:100%;
+    width:100%;
+  }
 }
 
 .button-logging-hours {
-  display: block;
   color: white;
   height: 100px;
   width: 300px;
   background: #EC6965;
-  border: 2px solid rgba(33, 68, 72, 0.59);
+  border-radius: 10px;
+}
+
+.add_time {
+  background-color: $yellow;
+  min-height: 100%;
+  padding: 50px;
+  h1 {
+    color: white;
+    text-align: center;
+  }
 }
