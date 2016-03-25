@@ -7,6 +7,7 @@ As a user
 - [ ] NAVBAR goed doorlinken en stylen
 
 - [ ] Check if email works!
+- [ ] Add link from email to challenge with token 
 - [ ] Make template for how we email the Checkpoints 
 - [ ] Make template for end score: after week 4: who is winner and who lost! 
 
