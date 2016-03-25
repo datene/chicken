@@ -14,7 +14,7 @@ As a user
 
 - [x] I can accept a challenge (challenge controller accept)
 - [x] I can decline a challenge(challenge controller decline)
-- [ ] I can concede a challenge(challenge controller concede)
+- [x] I can concede a challenge(challenge controller concede)
  
 - [x] I can route to my dashboard!
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
@@ -50,7 +50,7 @@ EXTRA TO DO :
 - [x] Start date not in the past!
 - [x] Changing of the image should have a maximum
 
-- [ ] Get variables on Dashboard page so they can be stiled1
+- [x] Get variables on Dashboard page so they can be stiled1
 - [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
 - [ ] NAVBAR goed doorlinken en stylen
 - [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
