@@ -1,5 +1,22 @@
 As a user
+- [ ] SUMMARY na de drie vragen voor je op SEND drukt
+- [ ] VALIDATIONS!!!!
+- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
+- [ ] I get weekly updates through email (email verification api verhaal)
+- [ ] Add styling to email
+- [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
+- [ ] NAVBAR goed doorlinken en stylen
 
+- [ ] Check if email works!
+- [ ] Add link from email to challenge with token 
+- [ ] Make template for how we email the Checkpoints 
+- [ ] Make template for end score: after week 4: who is winner and who lost! 
+
+
+- [ ] I can chat to my opponents (messages controller index new destroy)
+- [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
+
+DONE:
 - [x] create a migration to change datetime to date!!!
 - [x] CREATE CHALLENGE CONTROLLER : 
 - [x] I can create a challenge: (Challlenger controller new + create) 
@@ -14,20 +31,14 @@ As a user
 
 - [x] I can accept a challenge (challenge controller accept)
 - [x] I can decline a challenge(challenge controller decline)
-- [ ] I can concede a challenge(challenge controller concede)
+- [x] I can concede a challenge(challenge controller concede)
  
 - [x] I can route to my dashboard!
-- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
-
 - [x] I can login (devise login)
 - [x] I can signup by creating a profile with email, foto, name(or FB) (devise signup through FB Omiauth)
  
 - [x] I can see a challenge (with my current score, my opponents score and my activity)(Challenge controller Show)
 - [x] I can log my hours spend on the activity (Logged_time controller new usage of Ajax if possible(see lecture reviews) )
-
-- [ ] I can chat to my opponents (messages controller index new destroy)
-- [ ] I get weekly updates through email (email verification api verhaal)
-
 
 '''''' 
 Extra's - /  In which I can discuss the allotment and deadline / // I can edit my profile // // I can negotiate the terms(deadline, allotment, wager) of the challenge //
@@ -38,9 +49,6 @@ ___________________________________________________________
 EXTRA TO DO :
 
 - [x] Change the end date to dd/mm/yy instead of a full stamp!! Figure out why it is going back in time three days
-
-- [ ] Add styling to email
-
 - [x] edit and new challenge: styling
 - [x] show challenge: balken moeten kloppen, + score meter
 - [x] Pagina maken waar vanuit de mail wordt doorgelinkt om zo te kunnen accepteren of afwijzen (routes)
@@ -50,10 +58,7 @@ EXTRA TO DO :
 - [x] Start date not in the past!
 - [x] Changing of the image should have a maximum
 
-- [ ] Get variables on Dashboard page so they can be stiled1
-- [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
-- [ ] NAVBAR goed doorlinken en stylen
-- [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
+
 
 _________________________________________________________
 
