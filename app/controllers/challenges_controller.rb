@@ -81,9 +81,11 @@ class ChallengesController < ApplicationController
   end
 
   def destroy
+    @challenge.destroy
+    redirect_to dashboard_path
   end
 
-  def accept # challenger that creates this challenge and gets a profile: connect to challenger_id
+  def accept 
     if user_signed_in?
       accept_with_user
     else
@@ -94,10 +96,18 @@ class ChallengesController < ApplicationController
   def decline
     @challenge.update(status: :declined)
     flash[:notice] = "Successfully declined. Thanks."
-    redirect_to root_path
+
+    if user_signed_in?
+      redirect_to dashboard_path
+    else
+      redirect_to root_path
+    end
   end
 
   def concede
+    @challenge.update(status: :conceded)
+    flash[:notice] = "Successfully conceded, Chicken!"
+    redirect_to dashboard_path
   end
 
   private
@@ -130,7 +140,7 @@ class ChallengesController < ApplicationController
     if @challenge.save
       redirect_to edit_challenge_path(@challenge)
     else
-      flash[:alert] = "blabla wrong params"
+      flash[:alert] = "This is not working"
       render :new
     end
   end
@@ -140,7 +150,7 @@ class ChallengesController < ApplicationController
       session[:new_challenge] = challenge_params_new.to_hash
       redirect_to new_user_session_path
     else
-      flash[:alert] = "blabla wrong params"
+      flash[:alert] = "This is not working"
       render :new
     end
   end
@@ -173,10 +183,8 @@ class ChallengesController < ApplicationController
     else
       return ratio
     end
-
   end
   
-
   def set_image_ratio_creator
     ratio = 1 + @creator_logged_times_amount / (@challenge.allotment * 60).to_f
 
