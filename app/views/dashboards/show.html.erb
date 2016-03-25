@@ -1,22 +1,27 @@
-<div class="wrap">
-
-  <h1>
-    PROFILE
-    ALL YOUR CHALLENGES
-  </h1>
-  <ul>
-
-    <%= image_tag current_user.picture, class:"avatar" %>
+<div class="dashboard">
+  <div class="user_info">
+    <div class="user_photo">
+      <%= image_tag current_user.picture, class:"avatar avatar_border" %>
+    </div>
+    <div class="user_name">
       <%= current_user.first_name%>
       <%= current_user.last_name%>
+    </div>
+    <div class="challenges_amount">
+      <%= @challenges.count %>      
+    </div>
+  </div>
 
-    <%= @challenges.count %>
-
-    <% @challenges.each do |challenge| %>
-    <%= challenge.name %>
-    <% end %>
- 
-
-
-  </ul>
+  <div class="challenges_index">
+    <div class="page_title">
+      <h1>
+        ALL YOUR CHALLENGES ARE BELONG TO US
+      </h1>
+    </div>
+    <ul class="index">
+      <% @challenges.each do |challenge| %>
+      <li class="index_item"> <%= challenge.creator_id %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -1,0 +1,47 @@
+.dashboards-show {
+  background-color: $brand-color;
+  padding-top: 100px;
+}
+
+.page_title {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 38px;
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  border-top-right-radius: 50%;
+  background-color: #EC6965;
+  width: 300px;
+  margin: 0 auto;
+  height: 300px;
+  border-top-left-radius: 50%;
+
+}
+
+.user_name {
+  font-size: 23pt;
+  margin-top: 20px;
+  color: white;
+}
+
+.avatar_border {
+  border: 8px solid white;
+}
+
+.challenges_index {
+  padding-top: 20px;
+  background-color: #EC6965;
+  height: 100vh;
+}
+
+.challenges_amount {
+  font-size: 23px;
+  color: white;
+}
