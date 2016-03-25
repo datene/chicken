@@ -1,5 +1,6 @@
 As a user
 - [ ] SUMMARY na de drie vragen voor je op SEND drukt
+- [ ] VALIDATIONS!!!!
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] I get weekly updates through email (email verification api verhaal)
 - [ ] Add styling to email
