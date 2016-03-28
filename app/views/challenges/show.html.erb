@@ -2,15 +2,24 @@
   <div class="challenge_status">
     <div class="avatarbox">
       <%= image_tag @challenge.creator.picture, class: "avatar box-item creator borderavatar" %>
+      <% if @challenge.challenger != nil %>
       <%= image_tag @challenge.challenger.picture, class: "avatar box-item challenger borderavatar" %>
+      <% else %>
+      <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar box-item challenger borderavatar" %>
+      <% end %>
     </div>
     <h1><%=@challenge.activity.upcase%></h1>
     <div class="playerbox">
-      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item"><%= @challenge.challenger.first_name %></p> 
+      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item">
+      <% if @challenge.challenger != nil %>
+      <%= @challenge.challenger.first_name %></p> 
+      <% else %>
+      <%= @challenge.name %>
+      <% end %>
     </div>
   </div>
   <div class="wagers">
-      <div class="wager creator"><div class="euro">&#8364;</div><div><%= @current_amount_creator.round %></div></div>
+    <div class="wager creator"><div class="euro">&#8364;</div><div><%= @current_amount_creator.round %></div></div>
     <div class="wager filler"></div>
     <div class="wager challenger"><div class="euro">&#8364;</div><div><%= @current_amount_challenger.round %></div></div>
   </div>
@@ -24,12 +33,17 @@
       <%= image_tag @challenge.creator.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_creator_ratio})" %>
       <div class="alloted"><%= @challenge.allotment %></div>
       <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_challenger_ratio})" %>"> 20 </div>
+      <% if @challenge.challenger != nil %>
       <%= image_tag @challenge.challenger.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})"%>
+      <% else %>
+      <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})" %>
+      <% end %>
+
     </div>
   </div>
   <div class="whoop-container">
     <div class="add_score"><span>+</span></div>
     <%= render "logged_times/form", challenge: @challenge %>
   </div>
-  </div>
+</div>
 

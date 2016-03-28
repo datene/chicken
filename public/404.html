@@ -56,6 +56,14 @@
       margin-top: 80px;
       max-height: 300px;
     }
+
+    div.error_content p {
+      line-height: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+
   </style>
 </head>
 
@@ -64,9 +72,12 @@
   <div>
     <img src="404.png" alt="404!" class="error_image">
     <h1>404 - Not found!</h1>
-    <p>The page you were looking for doesn't exist.
-      You may have mistyped the address or the page may have moved.</p>
+    <div class="error_content">
+      <p>
+        The page you were looking for doesn't exist.
+        You may have mistyped the address or the page may have moved.
+      </p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </body>
-  </html>
+  </div>
+</body>
+</html>
