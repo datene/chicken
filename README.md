@@ -8,7 +8,7 @@ As a user
 - [x] NAVBAR goed doorlinken
 - [ ] NAVBAR goed stylen//  check padding
 
-- [ ] Check if email works!
+- [x] Check if email works!
 - [ ] Add link from email to challenge with token 
 - [ ] Make template for how we email the Checkpoints 
 - [ ] Make template for end score: after week 4: who is winner and who lost! 
