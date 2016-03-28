@@ -1,0 +1,6 @@
+# config/meta.yml
+meta_title: "Challenge Chicken"
+meta_description: "Do the things you want to do."
+meta_image: "chicken.png" # Une image dans votre dossier app/assets/images/
+twitter_account: "@chicken_app" # indispensable pour les Twitter Cards
+
