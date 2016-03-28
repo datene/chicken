@@ -5,7 +5,8 @@ As a user
 - [ ] I get weekly updates through email (email verification api verhaal)
 - [ ] Add styling to email
 - [ ] CREATE>JS>ERB goed fixen: gelogde tijden hebben meteen invloed op de image, niet na reload!! 
-- [ ] NAVBAR goed doorlinken en stylen
+- [x] NAVBAR goed doorlinken
+- [ ] NAVBAR goed stylen//  check padding
 
 - [ ] Check if email works!
 - [ ] Add link from email to challenge with token 
