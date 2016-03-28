@@ -73,7 +73,7 @@ class ChallengesController < ApplicationController
 
     if @challenge.save 
       flash[:notice] = "Succesfully created this challenge"
-      # UserMailer.welcome_email(@challenge).deliver_now
+      UserMailer.welcome_email(@challenge).deliver_now
       redirect_to challenge_path
     else
       flash.now[:alert] = "Oops.. Let's try again"
