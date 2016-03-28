@@ -1,6 +1,4 @@
 class UserMailer < ApplicationMailer
-  default from: 'blablabla@chicken.com'
-
   def welcome_email(challenge)
 
     @challenge = challenge

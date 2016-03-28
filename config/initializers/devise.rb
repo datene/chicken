@@ -16,7 +16,7 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV["FB_ID"], ENV["FB_SECRET"], scope: 'email', info_fields: 'email, first_name,last_name', image_size: 'large'
 end
 
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'info@challengechicken.me'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
