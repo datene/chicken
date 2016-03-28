@@ -9,7 +9,7 @@
     </div>
     <h1><%=challenge.activity.upcase%></h1>
     <div class="week">
-      Week <%= current_week %>
+      Week <%= challenge_decorator.current_week %>
     </div>
     <div class="playerbox">
       <p class="player-item"><%= challenge.creator.first_name %></p><p class="player-item grey">vs.</p>
@@ -25,26 +25,26 @@
   <div class="wagers">
     <div class="wager creator">
       <div class="euro">&#8364;</div>
-      <div><%= current_amount_creator.round %></div>
+      <div><%= challenge_decorator.current_amounts[:creator].round %></div>
     </div>
     <div class="wager filler"></div>
     <div class="wager challenger">
       <div class="euro">&#8364;</div>
-      <div><%= current_amount_challenger.round %></div>
+      <div><%= challenge_decorator.current_amounts[:challenger].round %></div>
     </div>
   </div>
-  <div class="creatorwagerbar" style="width: <%= creator_bar_value  %>%;"></div>
-  <div class="challengerwagerbar" style="width: <%= challenger_bar_value  %>%;"></div>
+  <div class="creatorwagerbar" style="width: <%= challenge_decorator.bar_values[:creator] %>%;"></div>
+  <div class="challengerwagerbar" style="width: <%= challenge_decorator.bar_values[:challenger] %>%;"></div>
   <div class="score">
     <h2>score</h2>
     <div class="avatarbox-score allotment">
-      <div class="challenge-avatar" style="<%= "transform: scale(#{imagestyle_creator_ratio}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.creator.picture})" %>"> </div>
+      <div class="challenge-avatar" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:creator]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.creator.picture})" %>"> </div>
       <div class="alloted"><%= challenge.allotment %></div>
       <% if challenge.challenger != nil %>
-        <div class="challenge-avatar" style="<%= "transform: scale(#{imagestyle_challenger_ratio}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.challenger.picture})" %>"  >
+        <div class="challenge-avatar" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.challenger.picture})" %>"  >
         </div>
       <% else %>
-      <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar-small", style: "transform: scale(#{imagestyle_challenger_ratio})" %>
+        <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar-small", style: "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]})" %>
       <% end %>
     </div>
   </div>

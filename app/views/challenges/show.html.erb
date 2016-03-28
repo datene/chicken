@@ -1,8 +1,8 @@
 <div class="wrap_white">
-<%= render "challenge", challenge: @challenge, current_week: @current_week, current_amount_creator: @current_amount_creator, current_amount_challenger: @current_amount_challenger, creator_bar_value: @creator_bar_value, challenger_bar_value: @challenger_bar_value, imagestyle_creator_ratio: @imagestyle_creator_ratio, imagestyle_challenger_ratio: @imagestyle_challenger_ratio%>
+  <%= render "challenge", challenge: @challenge, challenge_decorator: @challenge_decorator %>
 </div>
-  <div class="whoop-container">
-    <div class="add_score"><span>+</span></div>
-    <%= render "logged_times/form", challenge: @challenge %>
-  </div>
+<div class="whoop-container">
+  <div class="add_score"><span>+</span></div>
+  <%= render "logged_times/form", challenge: @challenge %>
+</div>
 
