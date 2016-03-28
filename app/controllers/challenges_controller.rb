@@ -77,6 +77,7 @@ class ChallengesController < ApplicationController
       redirect_to challenge_path
     else
       flash.now[:alert] = "Oops.. Let's try again"
+      render :edit
     end
   end
 
@@ -140,7 +141,7 @@ class ChallengesController < ApplicationController
     if @challenge.save
       redirect_to edit_challenge_path(@challenge)
     else
-      flash[:alert] = "This is not working"
+      flash[:alert] = "You haven't filled out the boxes correctly"
       render :new
     end
   end
@@ -150,7 +151,7 @@ class ChallengesController < ApplicationController
       session[:new_challenge] = challenge_params_new.to_hash
       redirect_to new_user_session_path
     else
-      flash[:alert] = "This is not working"
+      flash[:alert] = "You haven't filled out the boxes correctly"
       render :new
     end
   end
