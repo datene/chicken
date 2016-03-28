@@ -1,33 +1,87 @@
-<div id="logging-form" data-url="<%= challenge_logged_times_path(challenge) %>" class="wrap">
+<!-- <div id="logging-form" data-url="<%= challenge_logged_times_path(challenge) %>" class="wrap">
   <h1>This week you are battling for <%#= wager_amount / 4 %> money.
-  Log your times now! </h1>
-  <div class="button-times" id="addhours">
-    <p>
-      + 1 HR
-    </p
+    Log your times now! </h1>
+    <div class="button-times" id="addhours">
+      <p>
+        + 1 HR
+      </p>
+    </div>
+
+    <div class="button-times" id="removehours">
+      <p>
+        - 1 HR
+      </p>
+    </div>
+
+    <div class="button-times" id="addminutes">
+      <p>+ 10min</p>
+    </div>
+
+
+    <div class="button-times" id="removeminutes">
+      <p>- 10min</p>
+    </div>
+
+
+    <div class="calculator" id="calculated">
+      <div class="hour">0</div>:<div class="minute">0</div>
+    </div>
+
+    <div class="button-logging-hours">
+      Submit logged hours
+    </div>
+  </div> -->
+
+
+  <!-- complete wrapper for logged_times -->
+  <div id="logging-form" data-url="<%= challenge_logged_times_path(challenge) %>">
+    <!-- wrapper for logging times -->
+    <div class="wrapper-logging-times">
+      <div class="wrapper-log-hours">
+        <div class="add-hours-container">
+          <div id="addhours" class="log-button">
+            +
+          </div>
+        </div>
+        <div class="hour-container">
+          <div class="hour-text">
+            <span id="hour">0</span><span class="hour-label">h</span>
+          </div>
+        </div>
+        <div class="remove-hours-container">
+          <div id="removehours" class="log-button">
+            -
+          </div>
+        </div>
+      </div>
+      <div class="seperator">
+        :
+      </div>
+      <div class="wrapper-log-minutes">
+        <div class="add-minutes-container">
+         <div id="addminutes" class="log-button">
+          +
+        </div>
+      </div>
+      <div class="minute-container">
+        <div class="minute-text">
+          <span id="minute">00</span><span class="minute-label">min</span>
+        </div>
+      </div>
+      <div class="remove-minutes-container">
+
+        <div id="removeminutes" class="log-button">
+          -
+        </div>
       </div>
 
-  <div class="button-times" id="removehours">
-    <p>
-      - 1 HR
-    </p>
+    </div> 
   </div>
-
-  <div class="button-times" id="addminutes">
-    <p>+ 10min</p>
-  </div>
-
-
-  <div class="button-times" id="removeminutes">
-    <p>- 10min</p>
-  </div>
-
-
-  <div class="calculator" id="calculated">
-    <div class="hour">0</div>:<div class="minute">0</div>
-  </div>
-
-  <div class="button-logging-hours">
-    Submit logged hours
+  <!-- button logging hours -->
+  <div class="button-logging-hours-container">    
+    <div class="button-logging-hours">
+      SAVE
+    </div>
   </div>
 </div>
+

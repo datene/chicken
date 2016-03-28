@@ -1,29 +1,103 @@
-.button-times { 
-  color: white;
-  height: 100px;
-  width: 300px;
-  background: #EC6965;
-  border-radius: 10px;
-  p {
-    height:100%;
-    width:100%;
+// .button-times { 
+//   color: white;
+//   height: 100px;
+//   width: 300px;
+//   background: #EC6965;
+//   border-radius: 10px;
+//   p {
+//     height:100%;
+//     width:100%;
+//   }
+// }
+
+// .button-logging-hours {
+//   color: white;
+//   height: 100px;
+//   width: 300px;
+//   background: #EC6965;
+//   border-radius: 10px;
+// }
+
+// .add_time {
+//   background-color: $yellow;
+//   min-height: 100%;
+//   padding: 50px;
+//   h1 {
+//     color: white;
+//     text-align: center;
+//   }
+// }
+
+
+#logging-form {
+  height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: #fafafa;
+  background-color: #333333;
+  color: white;  
+  flex-flow: column;
+}
+
+.wrapper-logging-times{
+  display: flex;
+  font-size: 70px;
+  text-align: center;
+  align-items: center;
+  flex: 1;
+}
+
+.log-button{
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 42px;
+  color: #939393;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin: auto;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.9);
   }
 }
+
+.hour-text,
+.minute-text {
+  margin: 20px 0px;
+  display: flex;
+}
+
+
+.seperator {
+  margin: 0 15px;
+  opacity: 0.2;
+}
+
+.hour-label,
+.minute-label {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 22px;
+  display: inline-block;
+  margin-top: 14px;}
 
 .button-logging-hours {
-  color: white;
-  height: 100px;
-  width: 300px;
-  background: #EC6965;
-  border-radius: 10px;
+    background: $brand-color;
+    padding: 10px 20px;
+    font-size: 23px;
+    border-radius: 5px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.add_time {
-  background-color: $yellow;
-  min-height: 100%;
-  padding: 50px;
-  h1 {
-    color: white;
-    text-align: center;
-  }
+.button-logging-hours-container {
+  margin: 20px;
 }
