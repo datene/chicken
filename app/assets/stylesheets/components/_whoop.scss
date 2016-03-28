@@ -1,10 +1,10 @@
 .whoop-container {
   height: 100vh;
   background: white;
+  background-color: #333333;
   position: fixed;
   top: 0;
   left: 0;
-  overflow: scroll;
   right: 0;
   bottom: 0;
   transform: translateY(calc(100% - 56px ));
@@ -21,6 +21,9 @@
   }
   &.is-open {
     transform: translateY(0%);
+    #logging-form {
+      display: flex;
+    }
 
     .add_score span {
       transform: rotate(45deg);

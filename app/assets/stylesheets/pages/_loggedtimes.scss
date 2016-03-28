@@ -1,43 +1,13 @@
-// .button-times { 
-//   color: white;
-//   height: 100px;
-//   width: 300px;
-//   background: #EC6965;
-//   border-radius: 10px;
-//   p {
-//     height:100%;
-//     width:100%;
-//   }
-// }
-
-// .button-logging-hours {
-//   color: white;
-//   height: 100px;
-//   width: 300px;
-//   background: #EC6965;
-//   border-radius: 10px;
-// }
-
-// .add_time {
-//   background-color: $yellow;
-//   min-height: 100%;
-//   padding: 50px;
-//   h1 {
-//     color: white;
-//     text-align: center;
-//   }
-// }
-
 
 #logging-form {
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: #fafafa;
   background-color: #333333;
   color: white;  
   flex-flow: column;
+  display: none;
 }
 
 .wrapper-logging-times{

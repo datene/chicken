@@ -13,5 +13,6 @@ class LoggedTimesController < ApplicationController
 
   def set_challenge
     @challenge = current_user.all_challenges.find(params[:challenge_id])
+    @challenge_decorator = ChallengeDecorator.decorate(@challenge)
   end
 end
