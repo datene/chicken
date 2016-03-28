@@ -3,9 +3,10 @@
  * ------------------------------------- */
 // Google fonts
 // @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-// 
-$base-font: "Verdana", "Open Sans", "sans-serif";
-$header-font: "Verdana", "Helvetica", "sans-serif";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);//
+
+$base-font: "Noto Sans", "Open Sans", "sans-serif";
+$header-font: "Noto Sans", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
 // @font-face {
