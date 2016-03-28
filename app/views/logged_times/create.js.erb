@@ -1,1 +1,2 @@
 $(".whoop-container").removeClass('is-open');
+$('.wrap_white').html("<%= j render "challenges/challenge", challenge: @challenge, current_week: @current_week, current_amount_creator: @current_amount_creator, current_amount_challenger: @current_amount_challenger, creator_bar_value: @creator_bar_value, challenger_bar_value: @challenger_bar_value, imagestyle_creator_ratio: @imagestyle_creator_ratio, imagestyle_challenger_ratio: @imagestyle_challenger_ratio %>");
