@@ -14,10 +14,12 @@ class ChallengesController < ApplicationController
     end 
 
     today = Date.current
-    current_week = ((today - @challenge.start_date) / 7).ceil
+    @current_week = ((1 + (today - @challenge.start_date)) / 7).ceil
 
-    beginning_of_week = @challenge.start_date + (current_week - 1).weeks
-    end_of_week = @challenge.start_date + current_week.weeks - 1.day
+    check_checkpoints(@current_week)
+
+    beginning_of_week = @challenge.start_date + (@current_week - 1).weeks
+    end_of_week = @challenge.start_date + @current_week.weeks - 1.day
 
     # current week ratios
     @creator_logged_times_amount = @challenge.logged_times.where(user: @challenge.creator).between(beginning_of_week, end_of_week).sum(:amount)
@@ -193,6 +195,14 @@ class ChallengesController < ApplicationController
       return 2
     else
       return ratio
+    end
+  end
+
+  def check_checkpoints(current_week)
+    missing_weeks = (1...current_week).to_a - @challenge.checkpoints.pluck(:week)
+
+    missing_weeks.each do |week|
+      Checkpoints::CreateService.new(@challenge, week).call
     end
   end
 end

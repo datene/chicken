@@ -9,8 +9,11 @@
       <% end %>
     </div>
     <h1><%=@challenge.activity.upcase%></h1>
+    <div class="week">
+      Week <%= @current_week %>
+    </div>
     <div class="playerbox">
-      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs</p><p class="player-item">
+    <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs.</p><p class="player-item">
       <% if @challenge.challenger != nil %>
       <%= @challenge.challenger.first_name %></p> 
       <% else %>
@@ -28,13 +31,12 @@
   <div class="score">
     <h2>score</h2>
     <div class="avatarbox-score allotment">
-
-      <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_creator_ratio})" %>"> <%#= logged_time.amount %></div>
-      <%= image_tag @challenge.creator.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_creator_ratio})" %>
+    <div class="challenge-avatar" style="<%= "transform: scale(#{@imagestyle_creator_ratio}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{@challenge.creator.picture})" %>"  >
+      
+    </div>
       <div class="alloted"><%= @challenge.allotment %></div>
-      <div class="blackglow" style="<%= "transform: scale(#{@imagestyle_challenger_ratio})" %>"> 20 </div>
       <% if @challenge.challenger != nil %>
-      <%= image_tag @challenge.challenger.picture, class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})"%>
+          <div class="challenge-avatar" style="<%= "transform: scale(#{@imagestyle_creator_ratio}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{@challenge.challenger.picture})" %>"  >
       <% else %>
       <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar-small", style: "transform: scale(#{@imagestyle_challenger_ratio})" %>
       <% end %>
