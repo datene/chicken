@@ -21,14 +21,15 @@
           <% if user_signed_in? %>
 
           <!-- Notification -->
-          <li><%= link_to t(".top_call_to_action", default: "Dashboard"), "#", class: "navbar-wagon-item" %>
+          <li><%= link_to t(".top_call_to_action", default: "Dashboard"), dashboard_path , class: "navbar-wagon-item" %>
           </li>
-          <li><%= link_to t(".top_call_to_action", default: "About"), "#", class: "navbar-wagon-item" %>
+          <li><%= link_to t(".top_call_to_action", default: "About"), about_path, class: "navbar-wagon-item" %>
           </li>
-          <li><%= link_to t(".top_call_to_action", default: "Rules"), "#", class: "navbar-wagon-item" %>
+          <!-- Do we need this? -->
+         <!--  <li><%#= link_to t(".top_call_to_action", default: "Rules"), "#", class: "navbar-wagon-item" %>
           </li>
-          <li><%= link_to t(".top_call_to_action", default: "Contact us"), "#", class: "navbar-wagon-item" %>
-          </li>
+          <li><%#= link_to t(".top_call_to_action", default: "Contact us"), "#", class: "navbar-wagon-item" %>
+          </li> -->
 
           <!-- Profile picture and dropdown -->
           <li>
