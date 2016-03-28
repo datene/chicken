@@ -4,7 +4,7 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-      body {
+    body {
       background-color: #FFD464;
       color: white;
       text-align: center;
@@ -56,16 +56,25 @@
       margin-top: 80px;
       max-height: 300px;
     }
+
+    div.error_content p {
+      line-height: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/500.html -->
   <img src="500.png" alt="500!" class="error_image">
-    <div>
-      <h1>500 - Server error</h1>
-    </div>
+  <div>
+    <h1>500 - Server error</h1>
+  </div>
+  <div class="error_content">
     <p>We're sorry, but something went wrong.
-    If you are the application owner check the logs for more information.</p>
+      If you are the application owner check the logs for more information.
+    </p>
+  </div>
 </body>
 </html>
