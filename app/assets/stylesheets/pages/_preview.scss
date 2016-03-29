@@ -1,0 +1,87 @@
+.challenges-preview {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: $brand-color;
+}
+
+.preview_title {
+  color: $brand-color;
+  margin: 0px auto;
+  h1 {
+    text-align: center;
+  }
+}
+
+.preview_avatar {
+  margin: 0px auto;
+  display: block;
+}
+.preview_info {
+  margin: 0px auto;
+  width: 500px;
+  p {
+    color: $brand-color;
+    font-weight: normal;
+    opacity: 0.8;
+  }
+  span {
+    font-weight: 700;
+    opacity: 1;
+  }
+}
+
+.state_change {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0px auto;
+}
+
+.positive {
+  color: white;
+}
+
+.negative {
+  color: white;
+}
+
+.state_accept {
+  height: 80px;
+  width: 80px;
+  background-color: $blue;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform .3s ease; 
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.2)
+  }
+}
+
+.state_decline {
+  height: 80px;
+  width: 80px;
+  background-color: $red;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform .3s ease; 
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.2)
+  }
+}
+
+.preview_container {
+  background-color: white;
+  border-radius: 20pt;
+  padding: 20px;
+  margin: 0px 250px;
+}
