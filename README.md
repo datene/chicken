@@ -1,24 +1,29 @@
 As a user
 
-TO DO 
-- [ ] SUMMARY na de drie vragen voor je op SEND drukt
-- [ ] Check flash messages: they are behind the view and to broad! position absolute rught 0, top 0 left 0!
-- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
-- [ ] I get weekly updates through email (email verification api verhaal)
-- [ ] Add styling to email
+TO DO IMPORTANT FRONT END
 - [ ] NAVBAR goed stylen//  check padding?
 - [ ] if photo is size 2: padding right left? 30px?
+- [ ] Check flash messages: they are behind the view and to broad! position absolute rught 0, top 0 left 0!
+- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
+- [ ] KNIKKER weghalen bij de NAVBAR
 - [ ] Add picture on facebook for chicken
 - [ ] Week 1 on top of title not below it. no margin bottom, margin top: 30;
-- [ ] box shadow for all images: from product hunt! 
-- [ ] test with token sending 
-- [ ] the logged should be seen on the photo 
+- [ ] box shadow for all images: from product hunt!
+MAILER
+- [ ] Add styling to email
+- [ ] Make template for how we email the Checkpoints 
+- [ ] Make template for end score: after week 4: who is winner and who lost!
+
+
+TO DO IMPORTANT BACK END
+- [ ] the logged hours should be seen on the photo 
+- [ ] Add link from email to challenge with token 
+- [ ] test with token sending
 - [ ] name_challenger visible untill chalenge is accepted
 
-MAILERRRRR
-- [ ] Add link from email to challenge with token 
-- [ ] Make template for how we email the Checkpoints 
-- [ ] Make template for end score: after week 4: who is winner and who lost! 
+- [ ] SUMMARY na de drie vragen voor je op SEND drukt
+- [x] I get weekly updates through email (email verification api verhaal)
+- 
 REMOVEEEEEE
 - [ ] I can chat to my opponents (messages controller index new destroy)
 - [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
