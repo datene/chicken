@@ -14,7 +14,6 @@ class ChallengesController < ApplicationController
     end 
 
     check_checkpoints
-    # setup_challenge(@challenge)
   end
 
   def new
