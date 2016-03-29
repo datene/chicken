@@ -16,12 +16,12 @@
   flex-direction: column;
   justify-content: center;
 
-  border-top-right-radius: 50%;
-  background-color: #EC6965;
-  width: 300px;
+  border-top-right-radius: 20%;
+  background-color: $red;
+  width: 400px;
   margin: 0 auto;
-  height: 300px;
-  border-top-left-radius: 50%;
+  height: 500px;
+  border-top-left-radius: 20%;
 
 }
 
@@ -32,37 +32,64 @@
 }
 
 .avatar_border {
-  border: 8px solid white;
+  border: 2px solid white;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .challenges_index {
-  padding-top: 20px;
-  background-color: $red;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 10px 100px 10px;
 }
 
 .challenges_amount {
   font-size: 23px;
   color: white;
+  width: 130px;
+  text-align: right;
+  padding: 0px;
+  margin: 10px auto 0px auto;
 }
 
 .index-challenge-card {
+  max-width: 800px;
   height: 175px;
-  width: 100%;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-color: $brand-color;
+  background-color: $red;
   color: white;
   position: relative;
+  padding: 15px 15px 15px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .challenge-specs {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 30px;
 }
 
 .status {
   position: absolute;
   right: 20px;
   top: 20px;
+}
+
+.dashboard_icon {
+  width: 50px;
+  float: left;
+}
+
+.status .fa {
+  color: $blue;
+  opacity: 0.6;
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+}
+
+.status a:hover {
+  text-decoration: none;
 }

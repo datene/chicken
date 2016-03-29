@@ -18,7 +18,7 @@ class DashboardsController < ApplicationController
    @logged_times = LoggedTime.where(user_id: current_user.id)
    @sum_logged_times = 0
    @logged_times.each do |logged_time|
-    sum_logged_times += logged_time
+    @sum_logged_times += logged_time.amount
   end
 end
 
