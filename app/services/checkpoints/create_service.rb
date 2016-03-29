@@ -13,6 +13,7 @@ module Checkpoints
 
       compute_score_ratios
       create_checkpoint
+      notify_gamers
     end
 
     private
@@ -30,30 +31,38 @@ module Checkpoints
     end
 
     def create_checkpoint
-      checkpoint = @challenge.checkpoints.new(week: @week)
+      @checkpoint = @challenge.checkpoints.new(week: @week)
 
       last_checkpoint             = @challenge.checkpoints.order(week: :desc).first
-      checkpoint.creator_score    = last_checkpoint ? last_checkpoint.creator_score : 0
-      checkpoint.challenger_score = last_checkpoint ? last_checkpoint.challenger_score : 0
+      @checkpoint.creator_score    = last_checkpoint ? last_checkpoint.creator_score : 0
+      @checkpoint.challenger_score = last_checkpoint ? last_checkpoint.challenger_score : 0
 
       if same_ratio? || both_winners?
-        checkpoint.creator_score += @weekly_amount
-        checkpoint.challenger_score += @weekly_amount
+        @checkpoint.creator_score += @weekly_amount
+        @checkpoint.challenger_score += @weekly_amount
 
       elsif creator_winner? || challenger_bigger_looser? 
         amount_lost = @weekly_amount * (1 - @challenger_score_ratio)
 
-        checkpoint.creator_score += @weekly_amount + amount_lost
-        checkpoint.challenger_score += @weekly_amount - amount_lost
+        @checkpoint.creator_score += @weekly_amount + amount_lost
+        @checkpoint.challenger_score += @weekly_amount - amount_lost
 
       elsif creator_looser? || creator_bigger_looser?
         amount_lost = @weekly_amount * ( 1 - @creator_score_ratio)
 
-        checkpoint.creator_score += @weekly_amount - amount_lost
-        checkpoint.challenger_score += @weekly_amount + amount_lost
+        @checkpoint.creator_score += @weekly_amount - amount_lost
+        @checkpoint.challenger_score += @weekly_amount + amount_lost
       end
 
-      checkpoint.save
+      @checkpoint.save
+    end
+
+    def notify_gamers
+      if @week == 4
+        UserMailer.endscore_email(@challenge, @checkpoint).deliver_now
+      else
+        UserMailer.checkpoint_email(@challenge, @checkpoint).deliver_now
+      end
     end
 
     # predicates

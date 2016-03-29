@@ -110,14 +110,14 @@ $black: #333333; -->
     <td>
 
       <!-- Portrait -->
+      <img src= <%= @creator.picture %> alt="150x150" style="position: absolute; z-index: 999; top: 50px; width: 150px; height: 150px; border-radius: 50%; text-align: center; margin: 40%; margin-top: 10px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);"><img src= <%= @challenger.picture %> alt="150x150" style="position: absolute; z-index: 999; top: 50px; width: 150px; height: 150px; border-radius: 50%; text-align: center; margin: 50%; margin-top: 10px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);">
 
-      <img src= <%= @creator.picture %> alt="150x150" style="position: absolute; z-index: 999; top: 50px; width: 150px; height: 150px; border-radius: 50%; text-align: center; margin: 44%; margin-top: 10px">
       <!-- End Portrait -->
 
       <!--  Caption  -->
       <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align:center; color: #3d5153; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: 700; text-transform:uppercase;">
         <tr>
-          <td>Hey <%= @challenge.name_challenger %>, <%= @creator.first_name %> is challenging you.</td>
+          <td>This week's score for the <i><%= @challenge.activity %></i> challenge is</td>
         </tr>
       </table>
       <!--  End Caption  -->
@@ -129,11 +129,11 @@ $black: #333333; -->
     <td>
 
       <!--  Tagline  -->
-      <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align:center; color: #3d5153; font-family: 'Open Sans', Verdana, sans-serif; font-size: 14px; font-weight: 400;">
+      <table width="450px" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align: center; color: #3d5153; font-family: 'Open Sans', Verdana, sans-serif; font-size: 20px; font-weight: 400; margin-left: auto; margin-right: auto;">
         <tr>
-          <td> Do you wanna go <%= @challenge.activity %> <%= @challenge.allotment %> hours a week
-            for the next 4 weeks?
-          </td>
+          <td><b><%= @creator.first_name %></b> has a score of <b><%= @checkpoint.creator_score %>€</b></td>
+          <td style= "padding: 30px;  "><b>VS.</b></td>
+          <td><b><%= @challenger.first_name %></b> has a score of <b><%= @checkpoint.challenger_score %>€</b></td>
         </tr>
       </table>
       <!--  End Tagline  -->
@@ -148,7 +148,7 @@ $black: #333333; -->
       <table border="0" align="center" width="240" cellpadding="0" cellspacing="0" class="button_color button_shadow" bgcolor="#FFD464" style="border-radius: 50px; text-transform:uppercase; text-align:center; background-color: #FDB631;">
         <tr><td height="20" width="100%" style="height:20px;"></td></tr>
         <tr>
-          <td><a href="#" style="display:block; text-decoration:none; color: #fff; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700; letter-spacing:1px;">Let's do it</a></td>
+          <td><a href="<%= challenge_url(@challenge) %>" style="display:block; text-decoration:none; color: #fff; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700; letter-spacing:1px;">Let's take a look</a></td>
         </tr>
         <tr><td height="20" width="100%" style="height:20px;"></td></tr>
       </table>
@@ -170,11 +170,6 @@ $black: #333333; -->
 
 
 <!--  Footer  -->
-
-
-
-
-
 
 <table class="full_width_700" border="0" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="8ec940" style="border-collapse:collapse; border:0; background-color:#FFD464; border-top: 0px; border-top-style: solid; border-top-color: #f7f6f6;">
   <tr>
