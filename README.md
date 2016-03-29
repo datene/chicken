@@ -12,6 +12,7 @@ TO DO IMPORTANT FRONT END
 - [ ] nice styling to logged hours on avatar
 - [ ] Add `letter-spacing:2px;` on avatar
 - [ ] after Deadline: winner met eind score
+- [ ] add `target="_blank"` on link to challenge in mailer
 
 MAILER
 - [ ] Add styling to email
