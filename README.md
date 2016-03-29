@@ -10,6 +10,7 @@ TO DO IMPORTANT FRONT END
 - [ ] if photo is size 2: padding right left? 30px?
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] nice styling to logged hours on avatar
+- [ ] Add `letter-spacing:2px;` on avatar
 
 MAILER
 - [ ] Add styling to email
