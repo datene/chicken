@@ -77,6 +77,18 @@ class ChallengeDecorator < Draper::Decorator
     }
   end
 
+  def winner
+    return if last_checkpoint.week < 4
+
+    if last_checkpoint.challenger_score == last_checkpoint.creator_score
+      :tie
+    elsif last_checkpoint.challenger_score > last_checkpoint.creator_score
+      :challenger
+    else
+      :creator
+    end
+  end
+
   private
 
   def logged_amount_ratio(logged_times_amount)

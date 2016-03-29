@@ -21,6 +21,14 @@
       <% end %>
     </p>
   </div>
+  <% case challenge_decorator.winner 
+    when :creator %>
+    <p>CREATOR <%= challenge.creator.first_name %></p>
+  <% when :challenger %>
+    <p>CHALLENGER <%= challenge.challenger.first_name %></p>
+  <% when :tie %>
+    <p>TIEE</p>
+  <% end %>
 </div>
 <div class="wagers">
   <div class="wager creator">
