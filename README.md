@@ -6,9 +6,9 @@ TO DO IMPORTANT FRONT END
 - [x] Add picture on facebook for chicken
 - [x] box shadow for all images: from product hunt!
 - [x] Check flash messages: they are behind the view and too broad! position absolute rught 0, top 0 left 0!
+- [x] Week 1 on top of title not below it. no margin bottom, margin top: 30;
 - [ ] if photo is size 2: padding right left? 30px?
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
-- [ ] Week 1 on top of title not below it. no margin bottom, margin top: 30;
 
 MAILER
 - [ ] Add styling to email
