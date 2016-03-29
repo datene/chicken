@@ -28,6 +28,10 @@
   border: 3px solid white;
 }
 
+.avatar_shadow {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+}
+
 .avatarbox .creator {
   position: absolute;
   z-index: 999;

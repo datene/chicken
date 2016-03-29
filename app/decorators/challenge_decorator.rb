@@ -17,6 +17,20 @@ class ChallengeDecorator < Draper::Decorator
     }
   end
 
+  def logged_times_amounts_in_hours
+    @logged_times_amounts_in_hours ||= {
+      creator: logged_times_amounts[:creator] / 60,
+      challenger: logged_times_amounts[:challenger] / 60
+    }
+  end
+
+    def logged_times_amounts_plus_minutes
+    @logged_times_amounts_plus_minutes ||= {
+      creator: logged_times_amounts[:creator] % 60,
+      challenger: logged_times_amounts[:challenger] % 60
+    }
+  end
+
   def logged_times_ratios
     @logged_times_ratios ||= {
       creator: logged_amount_ratio(logged_times_amounts[:creator]),
