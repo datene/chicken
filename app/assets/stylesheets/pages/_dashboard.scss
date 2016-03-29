@@ -7,26 +7,42 @@
   text-align: center;
   color: white;
   font-weight: bold;
-  margin-bottom: 38px;
+  width: 80%;
+  background-color: $red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 20pt;
+  border-top-right-radius: 20pt;
 }
 
 .user_info {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-  border-top-right-radius: 20%;
+  justify-content: space-around;
+  border-top-right-radius: 20pt;
   background-color: $red;
-  width: 400px;
+  width: 380px;
   margin: 0 auto;
-  height: 500px;
-  border-top-left-radius: 20%;
+  height: 250px;
+  border-top-left-radius: 20pt;
+  padding: 25px;
+}
 
+.user_photo {
+  margin: 20px;
+  flex: 0 0 30%;
+}
+
+.user_stats {
+  margin: 20px;
+  flex: 0 0 30%;
 }
 
 .user_name {
-  font-size: 23pt;
+  font-size: 15pt;
+  font-weight: 400;
+  text-align: center;
   margin-top: 20px;
   color: white;
 }
@@ -37,23 +53,32 @@
 }
 
 .challenges_index {
+  width: 80%;
+  background-color: $red;
   min-height: 100vh;
   padding: 20px 10px 100px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-left-radius: 20pt;
+  border-bottom-right-radius: 20pt;
+  margin-bottom: 50px;
 }
 
 .challenges_amount {
+  height: 70px;
   font-size: 23px;
   color: white;
-  width: 130px;
+  width: 100px;
   text-align: right;
   padding: 0px;
   margin: 10px auto 0px auto;
 }
 
 .index-challenge-card {
+  display: flex;
   max-width: 800px;
   height: 175px;
-  background-color: $red;
+  background-color: $brand-color;
   color: white;
   position: relative;
   padding: 15px 15px 15px 30px;
@@ -92,4 +117,13 @@
 
 .status a:hover {
   text-decoration: none;
+}
+
+.activity_name {
+  font-size: 30pt;
+  margin-left: 20px;
+}
+
+.challenge_date {
+  margin-left: 20px;
 }
