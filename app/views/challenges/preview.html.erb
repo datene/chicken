@@ -2,5 +2,29 @@
 
 <br><br><br><br><br>
 
+<div class="avatarbox">
+    <%= image_tag @challenge.creator.picture, class: "avatar avatar_shadow box-item creator " %>
+    <% if @challenge.challenger != nil %>
+    <%= image_tag @challenge.challenger.picture, class: "avatar avatar_shadow box-item challenger " %>
+    <% else %>
+    <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar box-item challenger" %>
+    <% end %>
+  </div>
+
+<hr>
+<%= @challenge.creator.first_name %>
+<hr>
+<%=@challenge.activity.upcase %>
+<hr>
+<%= @challenge.allotment %>
+<hr>
+<%= @challenge.wager_amount %>
+<hr>
+<%= @challenge.start_date.to_formatted_s(:long_ordinal) %>
+<hr>
+<%= @challenge.deadline.to_formatted_s(:long_ordinal) %>
+  
+<hr>
+
 <%= link_to "Accept", accept_challenge_path(@challenge.token), method: :patch %>
 <%= link_to "Decline", decline_challenge_path(@challenge.token), method: :patch %>

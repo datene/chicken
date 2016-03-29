@@ -24,10 +24,6 @@
 
 }
 
-.borderavatar {
-  border: 3px solid white;
-}
-
 .avatar_shadow {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
 }
@@ -153,31 +149,34 @@
   font-weight: bold;
 }
 
-// .blackglow {
-//   height: 100px;
-//   width: 100px;
-//   position: absolute;
-//   border-radius: 50%;
-//   background-color: black;
-//   opacity: 0.2;
-//   z-index: 999;
-//   color: white;
-//   text-align: center;
-//   font-weight: bold;
-// }
-
 .week{
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
   text-transform: uppercase;
   color: #ACACAC;
   letter-spacing: 1px;
 }
 
 .challenge-avatar {
+  display: flex;
+  align-items: center;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background-size: cover !important;
   background-position: center center !important;
+}
+
+.logging-times-avatar {
+  font-size: 14px;
+  color: white;
+  margin: 0 auto;
+}
+
+.hour-log-label,
+.minute-log-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+  display: inline-block;
+  vertical-align: top;
 }
