@@ -14,7 +14,7 @@ TO DO IMPORTANT FRONT END
 
 MAILER
 - [ ] Add styling to email
-- [ ] Make template for how we email the Checkpoints 
+- [x] Make template for how we email the Checkpoints 
 - [ ] Make template for end score: after week 4: who is winner and who lost!
 
 TO DO IMPORTANT BACK END
@@ -22,7 +22,7 @@ TO DO IMPORTANT BACK END
 - [x] the logged hours should be seen on the photo 
 - [x] Add link from email to challenge with token 
 - [ ] test with token sending
-- [ ] name_challenger visible untill chalenge is accepted
+- [x] name_challenger visible untill chalenge is accepted
 
 - [ ] SUMMARY na de drie vragen voor je op SEND drukt
 - [x] I get weekly updates through email (email verification api verhaal)
