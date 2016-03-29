@@ -1,8 +1,8 @@
 <div class="challenge_status">
     <div class="avatarbox">
-      <%= image_tag challenge.creator.picture, class: "avatar box-item creator borderavatar" %>
+      <%= image_tag challenge.creator.picture, class: "avatar avatar_shadow box-item creator borderavatar" %>
       <% if challenge.challenger != nil %>
-        <%= image_tag challenge.challenger.picture, class: "avatar box-item challenger borderavatar" %>
+        <%= image_tag challenge.challenger.picture, class: "avatar avatar_shadow box-item challenger borderavatar" %>
       <% else %>
         <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar box-item challenger borderavatar" %>
       <% end %>
@@ -38,12 +38,17 @@
   <div class="score">
     <h2>score</h2>
     <div class="avatarbox-score allotment">
-      <div class="challenge-avatar" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:creator]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.creator.picture})" %>"> </div>
+      <div class="challenge-avatar avatar_shadow" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:creator]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.creator.picture})" %>">
+      <span class="logging-times-avatar"><%= challenge_decorator.logged_times_amounts_in_hours[:creator] %>h <%= challenge_decorator.logged_times_amounts_plus_minutes[:creator] %> min </span>
+      </div>
       <div class="alloted"><%= challenge.allotment %></div>
       <% if challenge.challenger != nil %>
-        <div class="challenge-avatar" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.challenger.picture})" %>"  >
+        <div class="challenge-avatar avatar_shadow" style="<%= "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url(#{challenge.challenger.picture})" %>"  >
+        <span class="logging-times-avatar"><%=  challenge_decorator.logged_times_amounts_in_hours[:challenger] %> h <%= challenge_decorator.logged_times_amounts_plus_minutes[:challenger] %> min </span>
         </div>
       <% else %>
+<!--        <div class="challenge-avatar" style="<%#= "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]}); background: linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.48)), url("http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif")" %>"  >
+        </div> -->
         <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar-small", style: "transform: scale(#{challenge_decorator.logged_times_ratios[:challenger]})" %>
       <% end %>
     </div>
