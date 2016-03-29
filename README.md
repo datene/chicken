@@ -6,7 +6,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Check flash messages: they are behind the view and to broad! position absolute rught 0, top 0 left 0!
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] KNIKKER weghalen bij de NAVBAR
-- [ ] Add picture on facebook for chicken
+- [x] Add picture on facebook for chicken
 - [ ] Week 1 on top of title not below it. no margin bottom, margin top: 30;
 - [ ] box shadow for all images: from product hunt!
 MAILER
