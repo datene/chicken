@@ -11,6 +11,7 @@ TO DO IMPORTANT FRONT END
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] nice styling to logged hours on avatar
 - [ ] Add `letter-spacing:2px;` on avatar
+- [ ] after Deadline: winner met eind score
 
 MAILER
 - [ ] Add styling to email
