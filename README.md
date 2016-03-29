@@ -9,17 +9,17 @@ TO DO IMPORTANT FRONT END
 - [x] Week 1 on top of title not below it. no margin bottom, margin top: 30;
 - [ ] if photo is size 2: padding right left? 30px?
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
+- [ ] nice styling to logged hours on avatar
 
 MAILER
 - [ ] Add styling to email
 - [ ] Make template for how we email the Checkpoints 
 - [ ] Make template for end score: after week 4: who is winner and who lost!
 
-
 TO DO IMPORTANT BACK END
-- [ ] User should be able to log out (INVALID AUTHENTICITY TOKEN, the change you wanted was rejected)
-- [ ] the logged hours should be seen on the photo 
-- [ ] Add link from email to challenge with token 
+- [x] User should be able to log out (INVALID AUTHENTICITY TOKEN, the change you wanted was rejected)
+- [x] the logged hours should be seen on the photo 
+- [x] Add link from email to challenge with token 
 - [ ] test with token sending
 - [ ] name_challenger visible untill chalenge is accepted
 
