@@ -134,7 +134,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.where(status: "pending", token: params[:id]).first
 
     unless @challenge
-      flash[:alert] = "Don't know what you're talking about :D"
+      flash[:alert] = "Don't know what you're talking about"
       redirect_to root_path
     end
   end
