@@ -21,6 +21,8 @@ TO DO IMPORTANT FRONT END
 - [ ] Improve button on edit form (style from new_challenge)
 - [ ] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
+- [ ] BEFORE and AFTER starting : not able to log times
+- [ ] before starting: on show, show startdate!
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
