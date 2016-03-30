@@ -15,11 +15,12 @@ TO DO IMPORTANT FRONT END
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
+- [ ] Implement new copy
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
 - [ ] Test challenge from creation to completion (winner, checkpoints etc.)
-- [ ] 
+- [ ] test with token sending
 
 TO DO IMPORTANT COPY:
 - [ ] Formulate questions new challenge
@@ -38,10 +39,9 @@ TO DO IMPORTANT BACK END
 - [x] User should be able to log out (INVALID AUTHENTICITY TOKEN, the change you wanted was rejected)
 - [x] the logged hours should be seen on the photo 
 - [x] Add link from email to challenge with token 
-- [ ] test with token sending
 - [x] name_challenger visible untill chalenge is accepted
 
-- [ ] SUMMARY na de drie vragen voor je op SEND drukt
+- [x] SUMMARY na de drie vragen voor je op SEND drukt
 - [x] I get weekly updates through email (email verification api verhaal)
 
 DONE:
