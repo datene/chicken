@@ -1,8 +1,11 @@
-<div class="wrap_white">
+  <% if @challenge.status = "pending" %>
+  <div class="cover_pending"></div>
+  <% else %>
   <%= render "challenge", challenge: @challenge, challenge_decorator: @challenge_decorator %>
-</div>
+  
 <div class="whoop-container">
   <div class="add_score"><span>+</span></div>
   <%= render "logged_times/form", challenge: @challenge %>
 </div>
+  <% end %>
 

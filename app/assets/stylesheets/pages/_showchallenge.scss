@@ -180,3 +180,10 @@
   display: inline-block;
   vertical-align: top;
 }
+
+.cover_pending {
+  height: 100vh;
+  width: 100vw;
+  background: image-url("banner.png") no-repeat center center fixed; 
+  background-size: cover;
+}

@@ -10,7 +10,7 @@
 
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <% if params[:action] == "show" && params[:controller] == "challenges" %>
+        <% if params[:action] == "show" && params[:controller] == "challenges" && @challenge.status != "pending" %>
         <i class="fa fa-bars fa-2x dropdown-toggle yellow_dropdown" data-toggle="dropdown"></i>
         <% else %>
         <i class="fa fa-bars fa-2x dropdown-toggle white_dropdown" data-toggle="dropdown"></i>
