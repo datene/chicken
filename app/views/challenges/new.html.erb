@@ -41,15 +41,26 @@
   </div>
   <div class="question-container" id='summary' data-prev='#next3'>
     <div class="question-content">
-      <div>
-        Summary    
+      <div class ="summary">
+        <p class="p_sum">
+          <span class="no-highlight">So you want to go</span> <span id="activity">x</span> <span class="no-highlight">with</span> <span id="challenger"> x </span><span class="no-highlight">?</span> <br>
+          <span class="no-highlight">And you're willing to bet</span> <span id="wager"> x</span>.
+
+        </p>
       </div>
       <div class='question-input-container'>
       </div>
       <div class='question-next-button'>
-        <%= f.submit "Go for it!", class: "summary_submit" %>
+        <%= f.submit "Let's go for it!", class: "summary_submit" %>
       </div>
     </div>
   </div>
 </div>
 <% end %> 
+
+<%= content_for :after_js do %>
+  <script>
+    document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
+  </script>
+<% end %>
+

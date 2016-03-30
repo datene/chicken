@@ -1,40 +1,48 @@
 .challenges-preview {
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 100px;
   background-color: $brand-color;
+  padding: 30px;
 }
 
 .preview_title {
   color: $brand-color;
-  margin: 0px auto;
+  margin-bottom: 90px;
   h1 {
     text-align: center;
+    margin-top: 0px;
+    color: white;
   }
 }
 
 .preview_avatar {
-  margin: 0px auto;
+  margin: 20px auto;
   display: block;
+  margin-top: -90px;
+  border: 10px solid white;
+  box-shadow: none;
 }
 .preview_info {
-  margin: 0px auto;
-  width: 500px;
+  margin: 40px auto;
+  padding-left: 40px;
+  padding-right: 40px;
   p {
-    color: $brand-color;
+    color: #333333;
     font-weight: normal;
     opacity: 0.8;
+    text-align: left;
   }
   span {
     font-weight: 700;
     opacity: 1;
+    text-align: left;
   }
 }
 
 .state_change {
   display: flex;
   justify-content: space-around;
-  width: 500px;
-  margin: 0px auto;
+  margin: 10px auto;
 }
 
 .positive {
@@ -83,5 +91,8 @@
   background-color: white;
   border-radius: 20pt;
   padding: 20px;
-  margin: 0px 250px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 700px;
+  margin: 0px auto;
 }
