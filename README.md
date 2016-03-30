@@ -13,7 +13,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Add `letter-spacing:2px;` on avatar
 - [ ] after Deadline: winner met eind score
 - [ ] add `target="_blank"` on link to challenge in mailer
-- [ ] Goed kijken naar de afronding van de getallen van de wager
+- [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 
 MAILER
 - [ ] Add styling to email
