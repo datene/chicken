@@ -37,26 +37,3 @@ class DashboardsController < ApplicationController
 
   end
 end
-
-
-
-
-
-   # @checkpoints = current_user.
-   # current_user.challenges.each do |challenge|
-    # challenge.checkpoints.each do |checkpoint|
-    #   if (checkpoint.week = 4)?     
-  #   end
-  # end
-
-  # raise 
-   # @victories  = 0 
-
-   # @challenges.each do |challenge|
-   #  if challenge.checkpoints.count == 4 
-   #    if 
-
-    #### FIX ME logged times by default 0 !
-    
-   # @logged_times_challenger = @challenge_challenger.logged_times 
-   # @logged_times_creator = @challenge_creator.logged_times

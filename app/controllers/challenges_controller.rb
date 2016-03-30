@@ -101,7 +101,7 @@ class ChallengesController < ApplicationController
   end
 
   def challenge_params_edit
-    params.require(:challenge).permit(:activity, :email_challenger, :name_challenger, :wager_amount, :start_date, :deadline, :allotment)
+    params.require(:challenge).permit(:activity, :email_challenger, :name_challenger, :wager_amount, :wager_description, :start_date, :deadline, :allotment)
   end
 
   def create_with_user

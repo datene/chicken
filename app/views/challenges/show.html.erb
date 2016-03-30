@@ -1,5 +1,4 @@
   <% if @challenge.status == "pending" %>
-  <% raise %>
     <div class="cover_pending"></div>
   <% else %>
     <%= render "challenge", challenge: @challenge, challenge_decorator: @challenge_decorator %>
