@@ -12,13 +12,13 @@ TO DO IMPORTANT FRONT END
 - [x] Add `letter-spacing:2px;` on avatar
 - [x] if photo is size 2: made it smaller
 - [x] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
+- [x] Improve button on edit form (style from new_challenge)
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
 - [ ] Implement new copy
 - [ ] Login < alles weg behalve FACEBOOK
 - [ ] Database opnieuw inrichten met dummy content
-- [ ] Improve button on edit form (style from new_challenge)
 - [ ] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
 - [ ] BEFORE and AFTER starting : not able to log times
