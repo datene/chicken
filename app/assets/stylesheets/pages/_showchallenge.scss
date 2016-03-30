@@ -189,3 +189,7 @@
   background: image-url("banner.png") no-repeat center center fixed; 
   background-size: cover;
 }
+.player-item i {
+  color: $brand-color;
+  display: inline;
+}

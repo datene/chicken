@@ -1,0 +1,8 @@
+<p class="player-item"><%= challenge.creator.first_name %></p><p class="player-item grey">vs.</p>
+    <p class="player-item">
+      <% if challenge.challenger != nil %>
+      <%= challenge.challenger.first_name %>
+      <% else %>
+      <%= challenge.name_challenger %>
+      <% end %>
+    </p>
