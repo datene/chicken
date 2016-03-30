@@ -23,6 +23,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
 - [ ] BEFORE and AFTER starting : not able to log times
 - [ ] before starting: on show, show startdate!
+- [ ] Redesign dropdown topright corner into branding style
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
