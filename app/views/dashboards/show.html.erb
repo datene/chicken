@@ -29,9 +29,20 @@
       <% @challenges.each do |challenge| %>
       <div class="index-challenge-card">
         <div class="challenge-specs">
-          <p><%= @opponent.first_name %></p>
+          <p><%= @opponent.first_name %></i></span></p>
         </div>
         <img class="card-user avatar avatar_shadow" src="<%= @opponent.picture %>">
+        <% if challenge.winner_user?(current_user) %>
+        <div class="challenge_info">
+          <div class="activity_name">
+            <%= challenge.activity %>
+            <span><i class="fa fa-trophy"></i></span>
+          </div>
+          <div class="challenge_date">
+            Finished
+          </div>
+        </div>
+        <% else %>
         <div class="challenge_info">
           <div class="activity_name">
             <%= challenge.activity %>
@@ -40,6 +51,7 @@
             From <%= challenge.start_date %> until <%= challenge.deadline %>
           </div>
         </div>
+        <% end %>
         <div class="status">
           <p><%= challenge.status %></p> 
           <% if challenge.status == "pending" %>

@@ -1,8 +1,15 @@
-<p class="player-item"><%= challenge.creator.first_name %></p><p class="player-item grey">vs.</p>
-    <p class="player-item">
-      <% if challenge.challenger != nil %>
+<div class="week">
+  Week <%= challenge_decorator.current_week %>
+</div>
+<h1><%=challenge.activity.upcase%></h1>
+<div class="playerbox">
+  <p class="player-item"><%= challenge.creator.first_name %></p>
+  <p class="player-item grey">vs.</p>
+  <p class="player-item">
+    <% if challenge.challenger != nil %>
       <%= challenge.challenger.first_name %>
-      <% else %>
+    <% else %>
       <%= challenge.name_challenger %>
-      <% end %>
-    </p>
+    <% end %>
+  </p>
+</div>

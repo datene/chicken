@@ -1,28 +1,21 @@
-<% case challenge_decorator.winner %>
-<% when :creator %>
 <div class="week">
-  Finished
+  Finished  
 </div>
 <h1><%=@challenge.activity.upcase%></h1>
 <div class="playerbox">
-  <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.creator.first_name %></span></p><p class="player-item grey">vs.</p>
+
+<% case challenge_decorator.winner %>
+<% when :creator %>
+  <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.creator.first_name %></span></p>
+  <p class="player-item grey">vs.</p>
   <p class="player-item"><%= @challenge.challenger.first_name %></p>
-
-  <% when :challenger %>
-  <div class="week">
-    Finished  </div>
-    <h1><%=@challenge.activity.upcase%></h1>
-    <div class="playerbox">
-      <p class="player-item"><%= @challenge.creator.first_name %></p><p class="player-item grey">vs.</p>
-      <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.challenger.first_name %></span></p>
-      <% when :tie %>
-      <div class="week">
-        Finished  </div>
-        <h1><%=@challenge.activity.upcase%></h1>
-        <div class="playerbox">
-          <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.creator.first_name %></span></p><p class="player-item grey">vs.</p>
-          <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.challenger.first_name %></span></p>
-          <% end %>
-        </div>
-
-      </div>
+<% when :challenger %>
+  <p class="player-item"><%= @challenge.creator.first_name %></p>
+  <p class="player-item grey">vs.</p>
+  <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.challenger.first_name %></span></p>
+<% when :tie %>
+  <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.creator.first_name %></span></p>
+  <p class="player-item grey">vs.</p>
+  <p class="player-item"><span><i class="fa fa-trophy"></i><%= @challenge.challenger.first_name %></span></p>
+<% end %>
+</div>
