@@ -16,6 +16,8 @@ TO DO IMPORTANT FRONT END
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
 - [ ] Implement new copy
+- [ ] Login < alles weg behalve FACEBOOK
+- [ ] Database opnieuw inrichten met dummy content
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
