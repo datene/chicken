@@ -4,23 +4,23 @@ class DashboardsController < ApplicationController
     set_challenges_current_user
     set_logged_times_current_user
     set_opponent_for_challenge
- end
-
-
- private
-
- def set_challenges_current_user
-  @challenges = current_user.all_challenges
- end
-
-
- def set_logged_times_current_user
-   @logged_times = LoggedTime.where(user_id: current_user.id)
-   @sum_logged_times = 0
-   @logged_times.each do |logged_time|
-    @sum_logged_times += logged_time.amount
   end
-end
+
+
+  private
+
+  def set_challenges_current_user
+    @challenges = ChallengeDecorator.decorate_collection(current_user.all_challenges)
+  end
+
+
+  def set_logged_times_current_user
+    @logged_times = LoggedTime.where(user_id: current_user.id)
+    @sum_logged_times = 0
+    @logged_times.each do |logged_time|
+      @sum_logged_times += logged_time.amount
+    end
+  end
 
   def set_opponent_for_challenge
     @challenges.each do |challenge|

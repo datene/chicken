@@ -78,7 +78,7 @@ class ChallengeDecorator < Draper::Decorator
   end
 
   def winner
-    return if last_checkpoint.week < 4
+    return if last_checkpoint.nil? || last_checkpoint.week < 4
 
     if last_checkpoint.challenger_score == last_checkpoint.creator_score
       :tie
@@ -86,6 +86,19 @@ class ChallengeDecorator < Draper::Decorator
       :challenger
     else
       :creator
+    end
+  end
+
+  def winner_user?(user)
+    case winner
+    when :tie
+      true
+    when :challenger
+      object.challenger == user
+    when :creator
+      object.creator == user
+    else
+      false
     end
   end
 
