@@ -1,5 +1,6 @@
 .challenges-show {
   background-color: white;
+  margin-top: 80px;
 }
 
 .challenge_status h1 {
@@ -160,8 +161,8 @@
 .challenge-avatar {
   display: flex;
   align-items: center;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
   background-size: cover !important;
   background-position: center center !important;
@@ -171,6 +172,7 @@
   font-size: 14px;
   color: white;
   margin: 0 auto;
+  letter-spacing: 2px;
 }
 
 .hour-log-label,
