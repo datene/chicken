@@ -19,6 +19,8 @@ TO DO IMPORTANT FRONT END
 - [ ] Login < alles weg behalve FACEBOOK
 - [ ] Database opnieuw inrichten met dummy content
 - [ ] Improve button on edit form (style from new_challenge)
+- [ ] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
+- [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
