@@ -17,6 +17,7 @@ TO DO IMPORTANT FRONT END
 
 TO DO MISC
 - [ ] Add wager description and name to email in some relevant way, somewhere, maybe.
+- [ ] Test challenge from creation to completion (winner, checkpoints etc.)
 
 TO DO IMPORTANT COPY:
 - [ ] Formulate questions new challenge
