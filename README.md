@@ -15,6 +15,15 @@ TO DO IMPORTANT FRONT END
 - [ ] add `target="_blank"` on link to challenge in mailer
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 
+
+TO DO IMPORTANT COPY:
+- [ ] Formulate questions new challenge
+- [ ] formulate questions and fillers edit challenge
+- [ ] formulate challenge preview
+- [ ] formulate mailer content
+- [ ] think of dummy activities for presentation
+- [ ] think of what story to tell during presentation
+
 MAILER
 - [ ] Add styling to email
 - [x] Make template for how we email the Checkpoints 
