@@ -94,8 +94,8 @@ class ChallengeDecorator < Draper::Decorator
   def logged_amount_ratio(logged_times_amount)
     ratio = 1 + logged_times_amount / (object.allotment * 60).to_f
 
-    if ratio > 2
-      return 2
+    if ratio > 1.8
+      return 1.8
     else
       return ratio
     end
