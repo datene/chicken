@@ -7,17 +7,18 @@ TO DO IMPORTANT FRONT END
 - [x] box shadow for all images: from product hunt!
 - [x] Check flash messages: they are behind the view and too broad! position absolute rught 0, top 0 left 0!
 - [x] Week 1 on top of title not below it. no margin bottom, margin top: 30;
+- [x] add `target="_blank"` on link to challenge in mailer
+- [x] nice styling to logged hours on avatar
+- [x] Add `letter-spacing:2px;` on avatar
 - [ ] if photo is size 2: padding right left? 30px?
-- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
-- [ ] nice styling to logged hours on avatar
-- [ ] Add `letter-spacing:2px;` on avatar
 - [ ] after Deadline: winner met eind score on show challenge & index
-- [ ] add `target="_blank"` on link to challenge in mailer
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
+- [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
 - [ ] Test challenge from creation to completion (winner, checkpoints etc.)
+- [ ] 
 
 TO DO IMPORTANT COPY:
 - [ ] Formulate questions new challenge
