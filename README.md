@@ -15,6 +15,8 @@ TO DO IMPORTANT FRONT END
 - [ ] add `target="_blank"` on link to challenge in mailer
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 
+TO DO MISC
+- [ ] Add wager description and name to email in some relevant way, somewhere, maybe.
 
 TO DO IMPORTANT COPY:
 - [ ] Formulate questions new challenge
