@@ -6,14 +6,27 @@ $(function() {
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000);
+        }, 500);
         return false;
       }
     }
   });
 
+  $('#challenge_activity').keyup(function () {
+    $('#activity').text($(this).val());
+  });
+
+  $('#challenge_email_challenger').keyup(function () {
+    $('#challenger').text($(this).val());
+  });
+
+  $('#challenge_wager_amount').keyup(function () {
+    $('#wager').text($(this).val());
+  });
+
   var executed = false;
   $('.question-container').bind('mousewheel', function(e) {
+    console.log(e)
     if (!executed) {
       executed = true;
       var delta = e.originalEvent.wheelDelta;
@@ -32,10 +45,17 @@ $(function() {
         
       }
 
+
       setTimeout(function() {
         executed = false
       }, 1000)
     };
-
   });
+
+  $('.questions-container input').on('keydown', function(e) {
+    if(e.keyCode == 13) {
+      e.preventDefault();
+      $(this).parent().parent().parent().find('a').click()
+    }
+  })
 });

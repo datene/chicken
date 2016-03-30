@@ -1,5 +1,6 @@
 .challenges-new {
   overflow: hidden;
+
 }
 
 .form-control {
@@ -25,7 +26,18 @@
 .question-content {
   font-size: 25px;
   max-width: 400px;
+  padding: 20px;
 
+  .no-highlight {
+    opacity: .6;
+  }
+}
+
+.summary {
+  .p_sum {
+    font-size: 25px;
+    opacity: 1;
+  }
   .no-highlight {
     opacity: .6;
   }
@@ -59,12 +71,15 @@
 }
 
 .summary_submit {
-  border: none;
-  margin-top: 20px;
-  background-color: $blue;
-  border-radius: 5px;
-
+    border: none;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    color: $brand-color;
+    padding: 18px 15px;
+    transform: scale(1);
   &:hover {
-    transition: all 200ms ease;
+    transform: scale(1.2);
+    transition: transform 200ms ease;
   }
 }

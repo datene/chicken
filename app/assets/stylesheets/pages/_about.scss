@@ -46,11 +46,19 @@
 
 }
 
-.about_info h1, p {
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+.about_info {
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
 

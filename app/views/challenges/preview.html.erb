@@ -1,40 +1,40 @@
+<div class="preview_title">
+  <h1>You've been challenged!</h1>
+</div>
 <div class="preview_container">
-  <div class="preview_title">
-    <h1>You've been challenged!</h1>
-  </div>
   <%= image_tag @challenge.creator.picture, class: "avatar avatar_shadow preview_avatar" %>
 
   <div class="preview_info">
     <p>
-     <span><%= @challenge.creator.first_name %></span> 
-     challenges you to go
-     <span><%=@challenge.activity %></span>
-   </p>
-   <p>
-     <span><%= @challenge.creator.first_name %></span>
-     is determined to go 
-     <span><%=@challenge.activity %></span> for
-     <span> <%= @challenge.allotment %></span> 
-     hours a week.
-     <span><%= @challenge.creator.first_name %></span> 
-     is willing to wager
-     <span>&#8364; <%= @challenge.wager_amount %></span>
-     that the both of you will be able to keep this up for at least 4 weeks!
-   </p>
-   <p>
-    The challenge will begin on <br>
-    <span><%= @challenge.start_date.to_formatted_s(:long_ordinal) %></span>
-    and it will end on <br>
-    <span><%= @challenge.deadline.to_formatted_s(:long_ordinal) %></span>
-  </p>
-</div>
+      <span><%= @challenge.creator.first_name %></span> 
+      challenges you to go
+      <span><%=@challenge.activity %></span>
+    </p>
+    <p>
+      <span><%= @challenge.creator.first_name %></span>
+      is determined to go 
+      <span><%=@challenge.activity %></span> for
+      <span> <%= @challenge.allotment %></span> 
+      hours a week.
+      <span><%= @challenge.creator.first_name %></span> 
+      is willing to wager
+      <span>&#8364; <%= @challenge.wager_amount %></span>
+      that the both of you will be able to keep this up for at least 4 weeks!
+    </p>
+    <p>
+      The challenge will begin on <br>
+      <span><%= @challenge.start_date.to_formatted_s(:long_ordinal) %></span>
+      and it will end on <br>
+      <span><%= @challenge.deadline.to_formatted_s(:long_ordinal) %></span>
+    </p>
+  </div>
 
-<div class="state_change">
-  <%= link_to accept_challenge_path(@challenge.token), method: :patch, class: "state_accept" do %>
-  <i class="positive fa fa-check fa-2x"></i>
-  <% end %>
-  <%= link_to decline_challenge_path(@challenge.token), method: :patch , class: "state_decline" do %>
-  <i class="negative fa fa-times fa-2x"></i>
-  <% end %>
-</div>
+  <div class="state_change">
+    <%= link_to accept_challenge_path(@challenge.token), method: :patch, class: "state_accept" do %>
+    <i class="positive fa fa-check fa-2x"></i>
+    <% end %>
+    <%= link_to decline_challenge_path(@challenge.token), method: :patch , class: "state_decline" do %>
+    <i class="negative fa fa-times fa-2x"></i>
+    <% end %>
+  </div>
 </div>
