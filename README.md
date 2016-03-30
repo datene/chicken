@@ -11,12 +11,12 @@ TO DO IMPORTANT FRONT END
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] nice styling to logged hours on avatar
 - [ ] Add `letter-spacing:2px;` on avatar
-- [ ] after Deadline: winner met eind score
+- [ ] after Deadline: winner met eind score on show challenge & index
 - [ ] add `target="_blank"` on link to challenge in mailer
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 
 TO DO MISC
-- [ ] Add wager description and name to email in some relevant way, somewhere, maybe.
+- [x] Add wager description and name to email in some relevant way, somewhere, maybe.
 - [ ] Test challenge from creation to completion (winner, checkpoints etc.)
 
 TO DO IMPORTANT COPY:
@@ -28,9 +28,9 @@ TO DO IMPORTANT COPY:
 - [ ] think of what story to tell during presentation
 
 MAILER
-- [ ] Add styling to email
+- [x] Add styling to email
 - [x] Make template for how we email the Checkpoints 
-- [ ] Make template for end score: after week 4: who is winner and who lost!
+- [x] Make template for end score: after week 4: who is winner and who lost!
 
 TO DO IMPORTANT BACK END
 - [x] User should be able to log out (INVALID AUTHENTICITY TOKEN, the change you wanted was rejected)
