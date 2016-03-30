@@ -10,10 +10,11 @@ TO DO IMPORTANT FRONT END
 - [x] add `target="_blank"` on link to challenge in mailer
 - [x] nice styling to logged hours on avatar
 - [x] Add `letter-spacing:2px;` on avatar
-- [ ] if photo is size 2: padding right left? 30px?
+- [x] if photo is size 2: made it smaller
 - [ ] after Deadline: winner met eind score on show challenge & index
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
+- [ ] Make dashboard responsive
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
@@ -42,10 +43,6 @@ TO DO IMPORTANT BACK END
 
 - [ ] SUMMARY na de drie vragen voor je op SEND drukt
 - [x] I get weekly updates through email (email verification api verhaal)
-- 
-REMOVEEEEEE
-- [ ] I can chat to my opponents (messages controller index new destroy)
-- [ ] knikker op navbar alleen laten zien als we nog messages toevoegen
 
 DONE:
 - [x] VALIDATIONS!!!!
