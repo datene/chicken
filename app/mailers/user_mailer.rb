@@ -14,12 +14,24 @@ class UserMailer < ApplicationMailer
     mail(to: [@challenge.email_challenger, @creator_email], subject: "Your weekly score" )
   end
 
-  def endscore_email(challenge, checkpoint)
+  def endscore_email_tie(challenge)
     @challenge = challenge
-    @checkpoint = checkpoint
     @challenger = challenge.challenger
     @creator = challenge.creator
     @creator_email = @creator.email
+    mail(to: [@challenge.email_challenger, @creator_email], subject: "The final score of your challenge" )
+  end
+
+  def endscore_email_winner(challenge)
+    @challenge = challenge
+    @challenger = challenge.challenger
+    @creator = challenge.creator
+    @creator_email = @creator.email
+    if @challenge.winner == "creator"
+      @loser = @challenge.challenger
+    else 
+      @loser = @challenge.creator
+    end
     mail(to: [@challenge.email_challenger, @creator_email], subject: "The final score of your challenge" )
   end
 end

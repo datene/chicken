@@ -13,7 +13,7 @@ module Checkpoints
 
       compute_score_ratios
       create_checkpoint
-      notify_gamers
+      notify_players
     end
 
     private
@@ -57,9 +57,13 @@ module Checkpoints
       @checkpoint.save
     end
 
-    def notify_gamers
+    def notify_players
       if @week == 4
-        UserMailer.endscore_email(@challenge, @checkpoint).deliver_now
+        if @winner == "tie"
+          UserMailer.endscore_email_tie(@challenge).deliver_now
+        else
+          UserMailer.endscore_email_winner(@challenge).deliver_now
+        end
       else
         UserMailer.checkpoint_email(@challenge, @checkpoint).deliver_now
       end

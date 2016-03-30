@@ -12,6 +12,7 @@ class Challenge < ActiveRecord::Base
   validates :allotment, format: { with: /\A[+-]?\d+\Z/,
     message: "that is not a correct number of hours" }, on: :update
   validates :start_date, presence: true, on: :update
+  validates :wager_description, presence: true, on: :update
   validates :wager_amount, presence: true, format: { with: /\A[+-]?\d+\Z/,
     message: "don't forget to fill in the wager!" },  on: :update
 end
