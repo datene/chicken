@@ -11,7 +11,7 @@ TO DO IMPORTANT FRONT END
 - [x] nice styling to logged hours on avatar
 - [x] Add `letter-spacing:2px;` on avatar
 - [x] if photo is size 2: made it smaller
-- [ ] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
+- [x] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
@@ -23,12 +23,12 @@ TO DO MISC
 - [ ] test with token sending
 
 TO DO IMPORTANT COPY:
-- [ ] Formulate questions new challenge
-- [ ] formulate questions and fillers edit challenge
-- [ ] formulate challenge preview
-- [ ] formulate mailer content
-- [ ] think of dummy activities for presentation
-- [ ] think of what story to tell during presentation
+- [x] Formulate questions new challenge
+- [x] formulate questions and fillers edit challenge
+- [x] formulate challenge preview
+- [x] formulate mailer content
+- [x] think of dummy activities for presentation
+- [x] think of what story to tell during presentation
 
 MAILER
 - [x] Add styling to email
