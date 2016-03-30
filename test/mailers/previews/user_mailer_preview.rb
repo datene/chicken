@@ -11,10 +11,14 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.checkpoint_email(challenge, checkpoint)
   end
 
-  def endscore_email(challenge, checkpoint)
-    challenge = Challenge.find(21)
-    checkpoint = challenge.checkpoints.last
-    
-    UserMailer.checkpoint_email(challenge, checkpoint)
+  def endscore_email_tie
+    challenge = Challenge.find(21)    
+    UserMailer.endscore_email_tie(challenge)
   end
+
+  def endscore_email_winner
+    challenge = Challenge.find(21)    
+    UserMailer.endscore_email_winner(challenge)
+  end
+
 end
