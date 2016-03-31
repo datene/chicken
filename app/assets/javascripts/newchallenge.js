@@ -12,6 +12,17 @@ $(function() {
     }
   });
 
+var items = ["Soccer","Fishing", "Origami", "Singing", "Sewing", "Writing", 
+"Woodcarving", "Yoga", "Glasblowing", "Coloring", "Dancing", "Gaming", 
+"Meditating", "Snowboarding", "Kayaking", "Rugby", "Photography", "Swimming", "Cooking"]
+
+setInterval(function(){ 
+  var item = items[Math.floor(Math.random()*items.length)];
+  $("#challenge_activity").attr("placeholder", item);
+}, 2000);
+  
+
+
   $('#button1').click(function () {
     $('#activity').text($('#challenge_activity').val());
   });
@@ -20,7 +31,7 @@ $(function() {
     $('#challenger').text($('#challenge_email_challenger').val());
   });
 
-  $('#challenge_wager_amount').click(function () {
+  $('#button3').click(function () {
     $('#wager').text($('#challenge_wager_amount').val());
   });
 

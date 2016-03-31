@@ -21,9 +21,13 @@
           <% if user_signed_in? %>
 
           <!-- Notification -->
-          <li><%= link_to t(".top_call_to_action", default: "Dashboard"), dashboard_path , class: "navbar-wagon-item" %>
+          <li><%= link_to dashboard_path , class: "navbar-wagon-item" do %>
+            <i class="fa fa-dashboard"></i>  <%= t ".top_call_to_action", default: "Dashboard" %>
+          <% end %>
           </li>
-          <li><%= link_to t(".top_call_to_action", default: "About"), about_path, class: "navbar-wagon-item" %>
+          <li><%= link_to about_path, class: "navbar-wagon-item" do %>
+                <i class="fa fa-info-circle"></i>  <%= t ".top_call_to_action", default: "About" %>
+              <% end %>
           </li>
           <!-- Do we need this? -->
          <!--  <li><%#= link_to t(".top_call_to_action", default: "Rules"), "#", class: "navbar-wagon-item" %>
@@ -41,7 +45,9 @@
           <% else %>
 
           <!-- Login text link -->
-          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          <%= link_to new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+          <i class="fa fa-sign-in"></i>  <%= t ".sign_in", default: "Log in" %>
+          <% end %>
 
           <% end %>
         </div>
