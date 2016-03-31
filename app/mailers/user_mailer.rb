@@ -24,10 +24,11 @@ class UserMailer < ApplicationMailer
 
   def endscore_email_winner(challenge)
     @challenge = challenge
+    @challenge_decorator = ChallengeDecorator.decorate(@challenge)
     @challenger = challenge.challenger
     @creator = challenge.creator
     @creator_email = @creator.email
-    if @challenge.winner == "creator"
+    if @challenge_decorator.winner == "creator"
       @loser = @challenge.challenger
     else 
       @loser = @challenge.creator
