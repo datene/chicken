@@ -13,6 +13,7 @@ TO DO IMPORTANT FRONT END
 - [x] if photo is size 2: made it smaller
 - [x] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
 - [x] Improve button on edit form (style from new_challenge)
+- [x] If you do not enter correct information in edit_challenge it reloads the page without the proper background color, why?
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
@@ -31,7 +32,6 @@ TO DO IMPORTANT FRONT END
 - [ ] Change flash messages to $blue
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
-- [ ] If you do not enter correct information in edit_challenge it reloads the page without the proper background color, why?
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 
 TO DO MISC
