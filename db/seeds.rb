@@ -1,6 +1,5 @@
-User.destroy_all
 Challenge.destroy_all
-
+User.destroy_all
 
 abel = User.create!(first_name: "Abel", last_name: "Smith", picture: "http://creativestockphoto.com/wp-content/uploads/2014/10/images-of-man-and-woman-in-love.jpg", email: "bla1@bla.com", password: "whatever")
 lara = User.create!(first_name: "Lara", last_name: "Davis", picture: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTDKkh_6G8ybkhWBHCExCqy7LUiNfSwejWLOr5xUCDXM0cGMbln", email: "bla2@bla.com", password: "whatever")
