@@ -24,6 +24,7 @@ TO DO IMPORTANT FRONT END
 - [ ] BEFORE and AFTER starting : not able to log times
 - [ ] before starting: on show, show startdate!
 - [ ] Redesign dropdown topright corner into branding style
+- [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
