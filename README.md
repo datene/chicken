@@ -17,10 +17,10 @@ TO DO IMPORTANT FRONT END
 - 
 MICHÈLE
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
-- [ ] BEFORE and AFTER starting : not able to log times
+- [x] BEFORE and AFTER starting : not able to log times
 - [ ] Database opnieuw inrichten met dummy content
-- [ ] before starting: on show, show startdate!
-- [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
+- [x] before starting: on show, show startdate!
+- [x] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 
