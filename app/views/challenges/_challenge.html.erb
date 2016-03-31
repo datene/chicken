@@ -8,9 +8,9 @@
     <% end %>
   </div>
   <% if challenge_decorator.winner %>
-    <%= render "winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
+    <%= render "challenges/winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
   <% else %>
-    <%= render "no_winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
+    <%= render "challenges/no_winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
   <% end %>
 </div>
 <div class="wagers">
