@@ -35,7 +35,7 @@
       <p><%= challenge.name_challenger %></i></span></p>
     </div>
     <% if challenge.opponent(current_user) %>
-      <%= image_tag challenge.opponent.picture, class: "avatar card-user" %>
+      <%= image_tag challenge.opponent(current_user).picture, class: "avatar card-user" %>
     <% else %>
       <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar card-user" %>
     <% end %>
