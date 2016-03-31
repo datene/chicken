@@ -5,6 +5,22 @@ class ChallengeDecorator < Draper::Decorator
     @current_week ||= ((1 + (Date.current - object.start_date)) / 7).ceil
   end
 
+  def finished?
+    object.deadline < Date.current
+  end
+
+  def ongoing?
+    object.start_date <= Date.current && Date.current <= object.deadline
+  end
+
+  def opponent(user)
+    if object.creator == user
+      object.challenger
+    else
+      object.creator
+    end
+  end
+
   # current week
   
   def logged_times_amounts

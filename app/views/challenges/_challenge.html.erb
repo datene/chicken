@@ -1,17 +1,17 @@
 <div class="challenge_status">
   <div class="avatarbox">
     <%= image_tag challenge.creator.picture, class: "avatar avatar_shadow box-item creator " %>
-    <% if challenge.challenger != nil %>
+    <% if challenge.challenger %>
       <%= image_tag challenge.challenger.picture, class: "avatar avatar_shadow box-item challenger " %>
     <% else %>
       <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar box-item challenger" %>
     <% end %>
   </div>
-  <% if challenge_decorator.winner == nil %>  
-    <%= render "no_winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
-    <% else %>
+  <% if challenge_decorator.winner %>
     <%= render "winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
-    <% end %>
+  <% else %>
+    <%= render "no_winner_names", challenge_decorator: @challenge_decorator, challenge: @challenge %>
+  <% end %>
 </div>
 <div class="wagers">
   <div class="wager creator">
