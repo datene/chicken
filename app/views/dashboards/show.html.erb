@@ -39,7 +39,7 @@
     <% if challenge.winner_user?(current_user) %>
     <div class="challenge_info">
       <div class="activity_name">
-        <%= challenge.activity %>
+        <%= link_to challenge.activity, challenge_path(challenge) %>
         <span><i class="fa fa-trophy"></i></span>
       </div>
       <div class="challenge_date">
@@ -49,7 +49,7 @@
     <% else %>
     <div class="challenge_info">
       <div class="activity_name">
-        <%= challenge.activity %>
+        <%= link_to challenge.activity, challenge_path(challenge) %>
       </div>
       <div class="challenge_date">
         From <%= challenge.start_date %> until <%= challenge.deadline %>
