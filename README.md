@@ -23,6 +23,7 @@ MICHÈLE
 - [x] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
+- [x] fix margins to remove tons and tons of whitespace in mail
 
 LARS
 - [x] Login < alles weg behalve FACEBOOK
@@ -33,7 +34,6 @@ LARS
 - [x] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [x] Redesign dropdown topright corner into branding style
 - [x] Logo missing a slash in the mail
-- [ ] fix margins to remove tons and tons of whitespace in mail
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 - - Dashboard
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
@@ -42,7 +42,7 @@ LARS
 
 
 LENA
-- [ ] Implement new copy
+- [x] Implement new copy
 
 
 
