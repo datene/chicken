@@ -16,16 +16,15 @@
 }
 
 .user_info {
-  color: #333333;
-  background-color: white;
+  color: white;
   width: 200px;
-  margin-left:10px;
+  padding: 20px;
+  margin: 0px auto;
   border-radius: 10pt;
-  box-shadow: 3px 3px 3px rgba(2, 2, 2, 0.3);
-  position: fixed;
-  z-index: 888;
-  margin-top: 0px;
-  right:10px;
+}
+
+.challenge_info {
+  flex: 1 0 20%;
 }
 
 .user_photo {
@@ -34,17 +33,13 @@
 }
 
 .avatar_dashboard {
-  border: 8px solid white;
-}
-
-.user_stats {
-  margin: 20px;
+  box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.3);
 }
 
 .user_name {
   margin: 0px auto 0px auto;
   font-size: 15pt;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -68,36 +63,42 @@
   i {
     width: 60px;   
   }
-  min-height: 40px;
+  min-height: 20px;
   padding-top: 10px;
-  border-bottom: 1px dotted #333333;
+  margin: 10px auto;
 }
 
 .index-challenge-card {
   display: flex;
   max-width: 800px;
-  height: 175px;
+  height: 130px;
   background-color: white;
   color: #333333;
-  position: relative;
+  justify-content: space-between;
   padding: 15px 15px 15px 30px;
   border-radius: 5px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.2);
+  transform: scale(1);
+    transition: all 200ms ease;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.5);
+    margin-top: 30px;
+  }
 }
 
 .challenge-specs {
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
+  flex: 0 0 20%;
+  p {
+    font-weight: 700;
+  }
 }
 
 .status {
-  position: absolute;
-  right: 20px;
-  top: 20px;
+  flex: 0 0 20%
 }
 
 .dashboard_icon {
@@ -127,4 +128,8 @@
 
 .challenge_date {
   margin-left: 20px;
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

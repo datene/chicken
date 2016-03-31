@@ -5,6 +5,10 @@ class ChallengeDecorator < Draper::Decorator
     @current_week ||= ((1 + (Date.current - object.start_date)) / 7).ceil
   end
 
+  def days_left
+    (object.deadline - Date.today).to_i
+  end
+
   def finished?
     object.deadline < Date.current
   end
