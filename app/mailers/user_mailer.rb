@@ -28,11 +28,13 @@ class UserMailer < ApplicationMailer
     @challenger = challenge.challenger
     @creator = challenge.creator
     @creator_email = @creator.email
+    
     if @challenge_decorator.winner == "creator"
       @loser = @challenge.challenger
     else 
       @loser = @challenge.creator
     end
+
     mail(to: [@challenge.email_challenger, @creator_email], subject: "The final score of your challenge" )
   end
 end

@@ -9,11 +9,6 @@ class ChallengesController < ApplicationController
   end
 
   def show 
-    # if @challenge.challenger_id.nil?
-    #     ## fix me: possible to only show this on show?
-    #   flash[:notice] = "The challenger has not yet accepted your challenge!"
-    # end 
-
     check_checkpoints
   end
 
