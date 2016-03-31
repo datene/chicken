@@ -35,6 +35,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 - [ ] Facebook login to production instead of test?
 - [ ] Add padding to alert-flash messages on mobile
+- [ ] Make it so all the javascript update on new_challenge on keydown, so when you 'tab' in your email it still registers it at the point you enter the amount.
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
