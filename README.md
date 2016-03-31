@@ -108,6 +108,7 @@ EXTRA TO DO :
 - [x] my logged hours change the size of my image
 - [x] Start date not in the past!
 - [x] Changing of the image should have a maximum
+- [ ] Also send the creator an e-mail if the challenger has accepted
 
 
 
