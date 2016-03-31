@@ -31,9 +31,11 @@ LARS
 - [x] Add padding to alert-flash messages on mobile
 - [x] Make it so all the javascript update on new_challenge on keydown, so when you 'tab' in your email it still registers it at the point you enter the amount.
 - [x] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
+- [x] Redesign dropdown topright corner into branding style
+- [x] Logo missing a slash in the mail
+- [ ] fix margins to remove tons and tons of whitespace in mail
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
-- [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
-- [ ] Redesign dropdown topright corner into branding style
+- - Dashboard
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
 - [ ] fix accept/decline/delete/concede buttons in dashboard
