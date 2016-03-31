@@ -14,7 +14,7 @@ TO DO IMPORTANT FRONT END
 - [x] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
 - [x] Improve button on edit form (style from new_challenge)
 - [x] If you do not enter correct information in edit_challenge it reloads the page without the proper background color, why?
-- 
+
 MICHÈLE
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [x] BEFORE and AFTER starting : not able to log times
@@ -34,7 +34,6 @@ LARS
 - [x] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [x] Redesign dropdown topright corner into branding style
 - [x] Logo missing a slash in the mail
-- [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 - - Dashboard
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
@@ -53,6 +52,7 @@ TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
 - [ ] Test challenge from creation to completion (winner, checkpoints etc.)
 - [ ] test with token sending
+- [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 
 TO DO IMPORTANT COPY:
 - [x] Formulate questions new challenge
