@@ -9,9 +9,10 @@ class ChallengesController < ApplicationController
   end
 
   def show 
-    if @challenge.challenger_id.nil?
-      flash[:notice] = "The challenger has not yet accepted your challenge!"
-    end 
+    # if @challenge.challenger_id.nil?
+    #     ## fix me: possible to only show this on show?
+    #   flash[:notice] = "The challenger has not yet accepted your challenge!"
+    # end 
 
     check_checkpoints
   end
@@ -42,7 +43,6 @@ class ChallengesController < ApplicationController
       flash[:notice] = "Succesfully created this challenge"
       UserMailer.welcome_email(@challenge).deliver_now
 
-      # ChallengeMailer.invite_challenger(@challenge).deliver_now
       redirect_to challenge_path
     else
       flash.now[:alert] = "Oops.. Let's try again"

@@ -1,5 +1,9 @@
 <div class="week">
-  Week <%= challenge_decorator.current_week %>
+  <% if challenge_decorator.ongoing? %>
+    Week <%= challenge_decorator.current_week %>
+  <% else %>
+    Starting on <%= l(challenge.start_date) %>
+  <% end %>
 </div>
 <h1><%=challenge.activity.upcase%></h1>
 <div class="playerbox">

@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
-  has_many :challenges, foreign_key: "creator_id"
-  has_many :messages
+  has_many :challenges, foreign_key: "creator_id", dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :checkpoints, through: :challenges
+  has_many :logged_times, dependent: :destroy
   
   
   # Include default devise modules. Others available are:

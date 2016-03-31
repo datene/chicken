@@ -34,28 +34,26 @@
     <div class="challenge-specs">
       <p><%= challenge.name_challenger %></i></span></p>
     </div>
-    <!-- fix me please Michèle -->
-    <img class="card-user avatar" src="http://www.essence.com/sites/default/files/images/2012/06/21/happy-woman-400x295-2.jpg">
-    <% if challenge.winner_user?(current_user) %>
-    <div class="challenge_info">
-      <div class="activity_name">
-        <%= link_to challenge.activity, challenge_path(challenge) %>
-        <span><i class="fa fa-trophy"></i></span>
-      </div>
-      <div class="challenge_date">
-        Finished
-      </div>
-    </div>
+    <% if challenge.opponent(current_user) %>
+      <%= image_tag challenge.opponent.picture, class: "avatar card-user" %>
     <% else %>
+      <%= image_tag "http://static1.squarespace.com/static/55b0eea6e4b0eac970b56fa2/t/567c8e6de0327cd48acb8afe/1451003519533/chicken-sombrero.gif", class: "avatar card-user" %>
+    <% end %>
     <div class="challenge_info">
       <div class="activity_name">
         <%= link_to challenge.activity, challenge_path(challenge) %>
+        <% if challenge.winner_user?(current_user) %>
+          <span><i class="fa fa-trophy"></i></span>
+        <% end %>
       </div>
       <div class="challenge_date">
-        From <%= challenge.start_date %> until <%= challenge.deadline %>
+        <% if challenge.finished? %>
+          Finished
+        <% else %>
+          From <%= challenge.start_date %> until <%= challenge.deadline %>
+        <% end %>
       </div>
     </div>
-    <% end %>
     <div class="status">
       <p><%= challenge.status %></p> 
       <% if challenge.status == "pending" %>
