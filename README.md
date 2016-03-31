@@ -27,6 +27,8 @@ TO DO IMPORTANT FRONT END
 - [ ] Redesign dropdown topright corner into branding style
 - [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
 - [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
+- [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
+- [ ] Change flash messages to $blue
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
