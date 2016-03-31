@@ -14,27 +14,38 @@ TO DO IMPORTANT FRONT END
 - [x] after Deadline: winner met eind score on show challenge & index! font awesome beker naast naam winnaar!!
 - [x] Improve button on edit form (style from new_challenge)
 - [x] If you do not enter correct information in edit_challenge it reloads the page without the proper background color, why?
+- 
+MICHÈLE
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
+- [ ] BEFORE and AFTER starting : not able to log times
+- [ ] Database opnieuw inrichten met dummy content
+- [ ] before starting: on show, show startdate!
+- [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
+- [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
+
+LARS
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
 - [ ] fix accept/decline/delete/concede buttons in dashboard
-- [ ] Implement new copy
 - [ ] Login < alles weg behalve FACEBOOK
-- [ ] Database opnieuw inrichten met dummy content
 - [ ] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
-- [ ] BEFORE and AFTER starting : not able to log times
-- [ ] before starting: on show, show startdate!
 - [ ] Redesign dropdown topright corner into branding style
 - [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
 - [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
-- [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
-- [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
-- [ ] Facebook login to production instead of test?
 - [ ] Add padding to alert-flash messages on mobile
 - [ ] Make it so all the javascript update on new_challenge on keydown, so when you 'tab' in your email it still registers it at the point you enter the amount.
+
+
+LENA
+- [ ] Implement new copy
+
+
+
+
+
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
