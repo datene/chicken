@@ -34,6 +34,7 @@ TO DO IMPORTANT FRONT END
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 - [ ] Facebook login to production instead of test?
+- [ ] Add padding to alert-flash messages on mobile
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
