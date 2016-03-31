@@ -1,50 +1,51 @@
 .dashboards-show {
   background-color: $brand-color;
   padding-top: 100px;
+  padding-bottom: 100px;
+  padding: 100px 20px;
 }
 
 .page_title {
   text-align: center;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   width: 80%;
-  background-color: $red;
-  padding-top: 20px;
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  border-top-left-radius: 20pt;
-  border-top-right-radius: 20pt;
 }
 
 .user_info {
-  display: flex;
-  justify-content: space-around;
-  border-top-right-radius: 20pt;
-  background-color: $red;
-  width: 380px;
-  margin: 0 auto;
-  height: 250px;
-  border-top-left-radius: 20pt;
-  padding: 25px;
+  color: #333333;
+  background-color: white;
+  width: 200px;
+  margin-left:10px;
+  border-radius: 10pt;
+  box-shadow: 3px 3px 3px rgba(2, 2, 2, 0.3);
+  position: fixed;
+  z-index: 9999;
+  margin-top: 0px;
+  right:10px;
 }
 
 .user_photo {
-  margin: 20px;
-  flex: 0 0 30%;
+  width: 150px;
+  margin: 0px auto;
+}
+
+.avatar_dashboard {
+  border: 8px solid white;
 }
 
 .user_stats {
   margin: 20px;
-  flex: 0 0 30%;
 }
 
 .user_name {
+  margin: 0px auto 0px auto;
   font-size: 15pt;
   font-weight: 400;
   text-align: center;
-  margin-top: 20px;
-  color: white;
 }
 
 .avatar_border {
@@ -53,7 +54,6 @@
 }
 
 .challenges_index {
-  width: 80%;
   background-color: $red;
   min-height: 100vh;
   padding: 20px 10px 100px 10px;
@@ -65,27 +65,27 @@
 }
 
 .challenges_amount {
-  height: 70px;
-  font-size: 23px;
-  color: white;
-  width: 100px;
-  text-align: right;
-  padding: 0px;
-  margin: 10px auto 0px auto;
+  i {
+    width: 60px;   
+  }
+  min-height: 40px;
+  padding-top: 10px;
+  border-bottom: 1px dotted #333333;
 }
 
 .index-challenge-card {
   display: flex;
   max-width: 800px;
   height: 175px;
-  background-color: $brand-color;
-  color: white;
+  background-color: white;
+  color: #333333;
   position: relative;
   padding: 15px 15px 15px 30px;
   border-radius: 5px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.2);
 }
 
 .challenge-specs {
@@ -120,7 +120,8 @@
 }
 
 .activity_name {
-  font-size: 30pt;
+  font-size: 20pt;
+  font-weight: 700;
   margin-left: 20px;
 }
 
