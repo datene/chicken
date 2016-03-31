@@ -16,6 +16,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
+- [ ] fix accept/decline/delete/concede buttons in dashboard
 - [ ] Implement new copy
 - [ ] Login < alles weg behalve FACEBOOK
 - [ ] Database opnieuw inrichten met dummy content
@@ -24,6 +25,12 @@ TO DO IMPORTANT FRONT END
 - [ ] BEFORE and AFTER starting : not able to log times
 - [ ] before starting: on show, show startdate!
 - [ ] Redesign dropdown topright corner into branding style
+- [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
+- [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
+- [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
+- [ ] Change flash messages to $blue
+- [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
+- [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
