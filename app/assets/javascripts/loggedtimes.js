@@ -54,5 +54,7 @@ $(".button-logging-hours").click( function() {
   var totalLoggedTimes = endHourMinutes + endMinutes;
   var url = $("#logging-form").data("url");
 
-  $.post(url, { amount: totalLoggedTimes } );
+  $.post(url, { amount: totalLoggedTimes }, function(data){
+    // keep me so that the js response is executed
+  });
 });

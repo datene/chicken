@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   has_many :checkpoints, through: :challenges
   has_many :logged_times, dependent: :destroy
   
-  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
