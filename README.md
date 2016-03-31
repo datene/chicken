@@ -32,6 +32,7 @@ TO DO IMPORTANT FRONT END
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 - [ ] If you do not enter correct information in edit_challenge it reloads the page without the proper background color, why?
+- [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
