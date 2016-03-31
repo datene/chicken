@@ -16,6 +16,7 @@ TO DO IMPORTANT FRONT END
 - [ ] Goed kijken naar de afronding van de getallen van de wager: centen klein ernaast
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
+- [ ] fix accept/decline/delete/concede buttons in dashboard
 - [ ] Implement new copy
 - [ ] Login < alles weg behalve FACEBOOK
 - [ ] Database opnieuw inrichten met dummy content
