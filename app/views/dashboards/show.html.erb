@@ -47,11 +47,11 @@
         <% end %>
       </div>
       <div class="challenge_date">
-        <% if challenge.finished? %>
-          Finished
-        <% else %>
+<!--         <% if challenge.finished? %>
+          Finished FIXME: commented out: problem heroku
+        <% else %> -->
           From <%= challenge.start_date %> until <%= challenge.deadline %>
-        <% end %>
+ <!--        <% end %> -->
       </div>
     </div>
     <div class="status">
