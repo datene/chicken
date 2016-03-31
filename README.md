@@ -26,6 +26,7 @@ TO DO IMPORTANT FRONT END
 - [ ] before starting: on show, show startdate!
 - [ ] Redesign dropdown topright corner into branding style
 - [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
+- [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
 
 TO DO MISC
 - [x] Add wager description and name to email in some relevant way, somewhere, maybe.
