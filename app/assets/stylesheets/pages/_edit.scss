@@ -48,4 +48,7 @@
     transform: scale(1.2);
     transition: transform 200ms ease;
   }
+  &:active {
+    text-decoration: none;
+  }
 }

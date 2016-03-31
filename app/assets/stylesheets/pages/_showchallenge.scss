@@ -1,12 +1,14 @@
 .challenges-show {
   background-color: white;
-  margin-top: 80px;
 }
 
-.challenge_status h1 {
-  color: $black;
-  font-weight: bold;
-  text-align: center;
+.challenge_status {
+  margin-top: 80px;
+  h1 {
+    color: $black;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 .avatarbox {

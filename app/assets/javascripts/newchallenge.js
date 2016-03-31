@@ -12,16 +12,16 @@ $(function() {
     }
   });
 
-  $('#challenge_activity').keyup(function () {
-    $('#activity').text($(this).val());
+  $('#button1').click(function () {
+    $('#activity').text($('#challenge_activity').val());
   });
 
-  $('#challenge_email_challenger').keyup(function () {
-    $('#challenger').text($(this).val());
+  $('#button2').click(function () {
+    $('#challenger').text($('#challenge_email_challenger').val());
   });
 
-  $('#challenge_wager_amount').keyup(function () {
-    $('#wager').text($(this).val());
+  $('#challenge_wager_amount').click(function () {
+    $('#wager').text($('#challenge_wager_amount').val());
   });
 
   var executed = false;
