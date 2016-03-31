@@ -32,7 +32,7 @@
   <% @challenges.each do |challenge| %>
   <div class="index-challenge-card">
     <div class="challenge-specs">
-      <p><%= @opponent.first_name %></i></span></p>
+      <p><%= challenge.name_challenger %></i></span></p>
     </div>
     <img class="card-user avatar" src="<%= @opponent.picture %>">
     <% if challenge.winner_user?(current_user) %>
