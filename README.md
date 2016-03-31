@@ -29,7 +29,6 @@ TO DO IMPORTANT FRONT END
 - [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
 - [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
 - [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
-- [ ] Change flash messages to $blue
 - [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
