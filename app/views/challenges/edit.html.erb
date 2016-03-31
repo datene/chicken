@@ -38,8 +38,8 @@
         <p>Who do you want to do it with?</p>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <%= f.input :name_challenger, placeholder: "Hank", label: false %>
-        <%= f.input :email_challenger, placeholder: "hank@hank.com", label: false%>
+        <%= f.input :name_challenger, placeholder: "John", label: false %>
+        <%= f.input :email_challenger, placeholder: "yourfriend@email.com", label: false%>
       </div>
     </div>
 
@@ -104,7 +104,7 @@
 
     <div class="row">
       <div class="col-xs-12 col-md-6 col-lg-offset-5 col-lg-4">
-        <%= f.submit class:"submit_edit_form", label: false %>
+        <%= f.submit "Create challenge", class:"submit_edit_form", label: false %>
       </div>
     </div>
     <% end %>
