@@ -40,7 +40,7 @@ class ChallengeDecorator < Draper::Decorator
     }
   end
 
-    def logged_times_amounts_plus_minutes
+  def logged_times_amounts_plus_minutes
     @logged_times_amounts_plus_minutes ||= {
       creator: logged_times_amounts[:creator] % 60,
       challenger: logged_times_amounts[:challenger] % 60
