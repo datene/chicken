@@ -41,6 +41,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     challenge_params = session[:new_challenge]
 
     challenge = Challenge.new(challenge_params)
+    challenge.token = SecureRandom.hex(13)
     challenge.creator = @user
     challenge.save!
 
