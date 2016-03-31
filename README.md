@@ -22,21 +22,21 @@ MICHÈLE
 - [ ] before starting: on show, show startdate!
 - [ ] Challenger has not yet accepted flash-alert message do not show this on preview_challenge page
 - [ ] Reverse order of challenges shown on dashboard to latest first (instead of oldest first)
+- [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 
 LARS
 - [ ] The dashboard is nice and shows part of your profile, my own activity, I can list my challenges
 - [ ] Make dashboard responsive
 - [ ] fix accept/decline/delete/concede buttons in dashboard
-- [ ] Login < alles weg behalve FACEBOOK
+- [x] Login < alles weg behalve FACEBOOK
 - [ ] Remove margin-top on show_challenge to get rid of the ugly, ugly white bars everywhere
 - [ ] Logo missing a slash in the mail, fix margins to remove tons and tons of whitespace
 - [ ] Redesign dropdown topright corner into branding style
 - [ ] new_challenge change javascript to ignore period (.) in e-mail addresses
 - [ ] edit_challenge change active_state on submit button to get rid of ugly black border (text-decoration:none)
-- [ ] show_challenge javascript submit logged_hours 'save' should close whoop container create.js.erb or refresh the page
 - [ ] investigate ugly white bars between challenge_show and whoop add_logged_times thingy
-- [ ] Add padding to alert-flash messages on mobile
-- [ ] Make it so all the javascript update on new_challenge on keydown, so when you 'tab' in your email it still registers it at the point you enter the amount.
+- [x] Add padding to alert-flash messages on mobile
+- [x] Make it so all the javascript update on new_challenge on keydown, so when you 'tab' in your email it still registers it at the point you enter the amount.
 
 
 LENA
