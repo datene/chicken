@@ -9,33 +9,33 @@
         <%= f.input :activity, class: "new_challenge_input", placeholder: 'Work out!', label: false %>
       </div>
       <div class='question-next-button'>
-        <a href='#next2'>Ok!</a>
+        <a href='#next2' id="button1" >Ok!</a>
       </div>
     </div>
   </div>
   <div class="question-container" id='next2' data-prev='#next1' data-next='#next3'>
     <div class="question-content">
       <div>
-        Who <span class="no-highlight">do you want to do it with? </span>   
+        Who <span class="no-highlight">do you want to challenge to do the same? </span>   
       </div>
       <div class='question-input-container'>
         <%= f.input :email_challenger, class: "new_challenge_input", placeholder: 'bob@spongemail.com', label: false %>
       </div>
       <div class='question-next-button'>
-        <a href='#next3'>Ok!</a>
+        <a href='#next3' id="button2">Ok!</a>
       </div>
     </div>
   </div>
   <div class="question-container" id='next3' data-prev='#next2' data-next='#summary'>
     <div class="question-content">
       <div>
-        How <span class="no-highlight">confident are </span> you?     
+        How much<span class="no-highlight"> do you dare to bet on</span> succeeding?     
       </div>
       <div class='question-input-container'>
         <%= f.input :wager_amount, class: "new_challenge_input", placeholder: '‎€ 10', label: false %>
       </div>
       <div class='question-next-button'>
-        <a href='#summary'>Ok!</a>
+        <a href='#summary' id="button3">Ok!</a>
       </div>
     </div>
   </div>
@@ -43,8 +43,8 @@
     <div class="question-content">
       <div class ="summary">
         <p class="p_sum">
-          <span class="no-highlight">So you want to go</span> <span id="activity">x</span> <span class="no-highlight">with</span> <span id="challenger"> x </span><span class="no-highlight">?</span> <br>
-          <span class="no-highlight">And you're willing to bet</span> <span id="wager"> x</span>.
+          <span class="no-highlight">Are you ready to create your</span> <span id="activity">x</span> <span class="no-highlight"> challenge with</span> <span id="challenger"> x </span><span class="no-highlight"> as your opponent </span> <br>
+          <span class="no-highlight">and wager &#8364;</span><span id="wager">x</span>?
 
         </p>
       </div>
