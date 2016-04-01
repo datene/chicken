@@ -45,6 +45,11 @@
 
       <div class="challenge_info">
         <div class="activity_name">
+        <% time_sum = 0 %>
+        <% challenge.logged_times.each do |time| %>
+        <% time_sum += time.amount %>
+        <% end %>
+        <%= time_sum / 60 %>
           <%= link_to challenge.activity, challenge_path(challenge) %>
           <% if challenge.winner_user?(current_user) %>
           <span><i class="fa fa-trophy"></i></span>
