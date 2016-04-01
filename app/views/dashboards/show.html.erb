@@ -20,11 +20,6 @@
     <div class="index-challenge-card">
       <div class="challenge-specs">
         <div class="challenge_date">
-<!--         <% if challenge.finished? %>
-          Finished FIXME: commented out: problem heroku
-          <% else %> -->
-          <!-- From <%= challenge.start_date %> until <%= challenge.deadline %> -->
-          <!--        <% end %> -->
           <% if challenge.ongoing? %>
           <p><%= challenge.days_left %>   <i class="fa fa-calendar-plus-o"></i> </p>
           <% elsif challenge.finished? %>
@@ -61,7 +56,7 @@
         </p> 
         <% if challenge.status == "pending" %>
         <p></p>
-        <% elsif challenge.status == "accepted" %>
+        <% elsif challenge.status == "accepted" && challenge.ongoing? %>
         <%= link_to concede_challenge_path(challenge), method: :patch,data: { confirm: "Are you sure you want to chicken out?"} do %>
         <p class="concede">Give up?</p>
         <% end %>

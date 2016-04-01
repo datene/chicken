@@ -60,9 +60,9 @@ module Checkpoints
     def notify_players
       if @week == 4
         if @winner == "tie"
-          UserMailer.endscore_email_tie(@challenge).deliver_now
+          # UserMailer.endscore_email_tie(@challenge).deliver_now
         else
-          UserMailer.endscore_email_winner(@challenge).deliver_now
+          # UserMailer.endscore_email_winner(@challenge).deliver_now
         end
       else
         UserMailer.checkpoint_email(@challenge, @checkpoint).deliver_now
