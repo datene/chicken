@@ -1,73 +1,74 @@
 <div class="dashboard">
   <div class="page_title">
     <h1>
-      Your dashboard
+      Dashboard
     </h1>
   </div>
   <div class="user_info">
     <div class="user_photo">
       <%= image_tag current_user.picture, class:"avatar avatar_dashboard" %>
     </div>
-      <div class="challenges_amount">
-        <p>
-          <%= "Total hours logged: #{@sum_logged_times}" %>
-        </p>       
+    <div class="challenges_amount">
+      <p>
+        <i class="fa fa-flag"></i> <%= "#{@challenges.count}" %> 
+      </p>
+   
     </div>
   </div>
 
-  <% @challenges.each do |challenge| %>
-  <div class="index-challenge-card">
-    <div class="challenge-specs">
-    <% if challenge.opponent(current_user) %>
-      <%= image_tag challenge.opponent(current_user).picture, class: "avatar-small card-user" %>
-    <% else %>
-      <%= image_tag "default.png", class: "avatar-small card-user" %>
-    <% end %>
-      <p><%= challenge.name_challenger %></i></span></p>
-    </div>
-
-
-    <div class="challenge_info">
-      <div class="activity_name">
-        <%= link_to challenge.activity, challenge_path(challenge) %>
-        <% if challenge.winner_user?(current_user) %>
-          <span><i class="fa fa-trophy"></i></span>
-        <% end %>
-      </div>
-      <div class="challenge_date">
+  <% @challenges.reverse_each do |challenge| %>
+    <div class="index-challenge-card">
+      <div class="challenge-specs">
+        <div class="challenge_date">
 <!--         <% if challenge.finished? %>
           Finished FIXME: commented out: problem heroku
-        <% else %> -->
-          From <%= challenge.start_date %> until <%= challenge.deadline %>
- <!--        <% end %> -->
-     <% if challenge.ongoing? %>
-      <p><%= challenge.days_left %> days remaining!</p>
-    <% elsif challenge.finished? %>
-      <p>Finished!</p>
-    <% else %>
-      <p>Not yet started</p>
-    <% end %>
+          <% else %> -->
+          <!-- From <%= challenge.start_date %> until <%= challenge.deadline %> -->
+          <!--        <% end %> -->
+          <% if challenge.ongoing? %>
+          <p><%= challenge.days_left %>   <i class="fa fa-calendar-plus-o"></i> </p>
+          <% elsif challenge.finished? %>
+          <p>Finished!</p>
+          <% else %>
+          <p>Not yet started</p>
+          <% end %>
 
+        </div>
+        <% if challenge.opponent(current_user) %>
+        <%= image_tag challenge.opponent(current_user).picture, class: "avatar-small card-user" %>
+        <% else %>
+        <%= image_tag "default.png", class: "avatar-small card-user" %>
+        <% end %>
+        <p><%= challenge.name_challenger %></i></span></p>
+      </div>
+
+
+      <div class="challenge_info">
+        <div class="activity_name">
+          <%= link_to challenge.activity, challenge_path(challenge) %>
+          <% if challenge.winner_user?(current_user) %>
+          <span><i class="fa fa-trophy"></i></span>
+          <% end %>
+        </div>
+      </div>
+      <div class="status">
+        <p>
+          <% if challenge.status == "accepted" %>
+          <p> </p>
+          <% elsif challenge.status == "pending" %>
+          <p>Pending...</p>
+          <% end %>
+        </p> 
+        <% if challenge.status == "pending" %>
+        <p></p>
+        <% elsif challenge.status == "accepted" %>
+        <%= link_to concede_challenge_path(challenge), method: :patch,data: { confirm: "Are you sure you want to chicken out?"} do %>
+        <p class="concede">Give up?</p>
+        <% end %>
+        <% else %>
+        <%= link_to "Delete", challenge_path(challenge), method: :delete, data: { confirm: "Are you sure you want to delete this challenge from your list?"} %>
+        <% end %>
       </div>
     </div>
-    <div class="status">
-      <p>
-        <% if challenge.status == "accepted" %>
-          <p>Accepted! <i class="fa fa-check"></i> </p>
-        <% elsif challenge.status == "pending" %>
-          <p>Pending...</p>
-        <% end %>
-      </p> 
-      <% if challenge.status == "pending" %>
-        <p></p>
-      <% elsif challenge.status == "accepted" %>
-      <%= link_to concede_challenge_path(challenge), method: :patch,data: { confirm: "Are you sure you want to chicken out?"} do %>
-        <p>Concede? <i class="fa fa-frown-o"></i></p>
-      <% end %>
-      <% else %>
-      <%= link_to "Delete", challenge_path(challenge), method: :delete, data: { confirm: "Are you sure you want to delete this challenge from your list?"} %>
-      <% end %>
-    </div>
-  </div>
   <% end %>
 </div>
