@@ -1,8 +1,9 @@
 .dashboards-show {
   background-color: $brand-color;
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 100px;
   padding: 100px 20px;
+  min-height: 100vh;
 }
 
 .page_title {
@@ -21,10 +22,12 @@
   padding: 10px;
   margin: 0px auto;
   border-radius: 10pt;
+  position: relative;
 }
 
 .challenge_info {
-  flex: 1 0 20%;
+  margin: 0px auto;
+  text-align: center;
 }
 
 .user_photo {
@@ -33,7 +36,7 @@
 }
 
 .avatar_dashboard {
-  box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.3);
+  box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.3);
 }
 
 .user_name {
@@ -61,45 +64,81 @@
 
 .challenges_amount {
   i {
-    width: 60px;   
+    width: 10px;   
   }
-  min-height: 20px;
-  padding-top: 10px;
-  margin: 10px auto;
+  box-shadow: 1px 1px 1px rgba(2, 2, 2, 0.2);
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  padding: 3px;
+  flex-direction: column;
+  padding-top: 12px;
   text-align: center;
+  p {
+    font-size: 12px;
+  }
 }
 
 .index-challenge-card {
-  display: flex;
-  max-width: 800px;
-  height: 140px;
+  max-width: 250px;
+  height: 230px;
   background-color: white;
   color: #333333;
   justify-content: space-between;
   padding: 15px 15px 15px 20px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.2);
-  transform: scale(1);
-    transition: all 200ms ease;
+  transform: scale(1) translateY(0px);
+  transition: all 200ms ease;
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.003) translateY(-10px);
     box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.5);
-    margin-top: 30px;
   }
 }
 
 .challenge-specs {
-  flex: 0 1 15%;
+  position:relative;
+  width: 80px;
+  margin: 0px auto;
   p {
+    text-align: center;
     font-weight: 700;
   }
 }
 
+.concede {
+  text-align: center;
+  color: #333333;
+  opacity: 0.7;
+  transform:scale(1);
+  margin-bottom: 10px;
+  transition: transform 100ms ease;
+  &:hover {
+    transform:scale(1.039);
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+}
+
 .status {
-  flex: 0 1 20%
+  margin: 0px auto;
+  max-width: 130px;
+  p {
+    text-align: center;
+  }
 }
 
 .dashboard_icon {
@@ -108,13 +147,7 @@
 }
 
 .status .fa {
-  color: $blue;
-  opacity: 0.6;
-  &:hover {
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 200ms ease;
-  }
+  color: white;
 }
 
 .status a:hover {
@@ -124,11 +157,16 @@
 .activity_name {
   font-size: 20pt;
   font-weight: 700;
-  margin-left: 20px;
+  a {
+    color: $blue;
+  }
 }
 
 .challenge_date {
-  margin-left: 20px;
+  color: $red;
+  position: absolute;
+  right: -67px;
+  top: -14px;
   p {
     margin-top: 10px;
   }
