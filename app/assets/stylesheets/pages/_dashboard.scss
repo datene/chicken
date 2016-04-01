@@ -18,7 +18,7 @@
 .user_info {
   color: white;
   width: 200px;
-  padding: 20px;
+  padding: 10px;
   margin: 0px auto;
   border-radius: 10pt;
 }
@@ -66,16 +66,17 @@
   min-height: 20px;
   padding-top: 10px;
   margin: 10px auto;
+  text-align: center;
 }
 
 .index-challenge-card {
   display: flex;
   max-width: 800px;
-  height: 130px;
+  height: 140px;
   background-color: white;
   color: #333333;
   justify-content: space-between;
-  padding: 15px 15px 15px 30px;
+  padding: 15px 15px 15px 20px;
   border-radius: 5px;
   margin-top: 20px;
   margin-left: auto;
@@ -91,14 +92,14 @@
 }
 
 .challenge-specs {
-  flex: 0 0 20%;
+  flex: 0 1 15%;
   p {
     font-weight: 700;
   }
 }
 
 .status {
-  flex: 0 0 20%
+  flex: 0 1 20%
 }
 
 .dashboard_icon {
@@ -130,6 +131,5 @@
   margin-left: 20px;
   p {
     margin-top: 10px;
-    margin-bottom: 10px;
   }
 }
